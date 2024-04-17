@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('accomodaties', function (Blueprint $table) {
             $table->id();
+            $table->string('type');
+            $table->integer('aantalPersonen');
+            $table->double('kostenPerNacht');
+            $table->text('informatie');
+            $table->text('facilities');
+            $table->string('image');
             $table->timestamps();
         });
     }

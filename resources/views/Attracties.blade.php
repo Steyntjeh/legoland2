@@ -14,7 +14,7 @@
             <h2>{{$attractie['naamAttractie']}}</h2>
             <!--<p>{{$attractie['informatie']}}</p> -->
             <p>Minimale lengte: {{$attractie['minimaleLengte']}} meter</p>
-            <button type="submit" class="btn btn-primary">Details</button>
+            <a href="/details"><button type="submit" class="btn btn-primary">Details</button></a>
             <!-- <p class="informatie">{{$attractie['informatie']}}</p> -->
         </div>
         @endforeach

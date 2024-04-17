@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AttractiesController;
+use App\Http\Controllers\DetailsController;
 use App\Http\Controllers\TicketsController;
 
 
@@ -28,6 +29,8 @@ Route::get('', function () {
 });
 
 Route::get('/attracties', [AttractiesController::class, 'index']);
+
+Route::get('/details', [DetailsController::class, 'index']);
 
 Route::get('/contact', function () {
     return view('Contact');

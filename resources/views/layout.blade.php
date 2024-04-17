@@ -18,6 +18,8 @@
     <li><a href="/openingstijden">Openingstijden</a></li>
     <li><a href="/attracties">Attracties</a></li>
     <li><a href="/tickets">Tickets</a></li>
+    <li><a href="/accomodatie">Accomodaties</a></li>
+    <li><a href="#">Login</a></li>
   </ul>
 </div>
     <div class="container">

@@ -57,3 +57,7 @@ Route::get('/besteld', function () {
 Route::get('/aboutUs', function () {
     return view('aboutUs');
 });
+
+Route::get('/accomodatie', function () {
+    return view('accomodatie');
+});

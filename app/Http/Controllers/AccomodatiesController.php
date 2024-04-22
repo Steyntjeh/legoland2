@@ -14,7 +14,7 @@ class AccomodatiesController extends Controller
     {
         // Alle accomodaties ophalen
         $accomodaties = Accomodaties::all();
-        return view('accomodaties', ['accomodaties' => $accomodaties]);
+        return view('accomodatie', ['accomodaties' => $accomodaties]);
     }
 
     /**

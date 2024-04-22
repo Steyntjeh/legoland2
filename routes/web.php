@@ -5,6 +5,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AttractiesController;
 use App\Http\Controllers\DetailsController;
 use App\Http\Controllers\TicketsController;
+use App\Http\Controllers\AccomodatiesController;
 
 
 /*
@@ -58,6 +59,4 @@ Route::get('/aboutUs', function () {
     return view('aboutUs');
 });
 
-Route::get('/accomodatie', function () {
-    return view('accomodatie');
-});
+Route::get('/accomodatie', [AccomodatiesController::class, 'index']);

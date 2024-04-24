@@ -5,7 +5,8 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AttractiesController;
 use App\Http\Controllers\DetailsController;
 use App\Http\Controllers\TicketsController;
-use App\Http\Controllers\AccomodatiesController;
+use App\http\Controllers\AccomodatiesController;
+use App\http\Controllers\BoekingenController;
 
 
 /*
@@ -60,3 +61,5 @@ Route::get('/aboutUs', function () {
 });
 
 Route::get('/accomodatie', [AccomodatiesController::class, 'index']);
+
+Route::get('/boeken', [BoekingenController:: class, 'index']);

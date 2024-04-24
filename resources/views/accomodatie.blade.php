@@ -12,7 +12,7 @@
             <!--<p>{{$accomodatie['informatie']}}</p> -->
             <p>Aantal personen: {{$accomodatie['aantalPersonen']}} Personen</p>
             <p>€{{$accomodatie['kostenPerNacht']}} per nacht</p>
-            <a href="/"><button type="submit" class="btn btn-primary">Boeken</button></a>
+            <a href="/boeken"><button type="submit" class="btn btn-primary">Boeken</button></a>
         </div>
         @endforeach
     </div>

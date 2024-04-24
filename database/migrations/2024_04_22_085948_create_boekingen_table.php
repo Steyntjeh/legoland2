@@ -15,11 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('naam');
             $table->string('email');
-            $table->int('telefoonNummer');
+            $table->integer('telefoonNummer');
             $table->string('kamerType');
             $table->date('aankomst');
             $table->date('vertrek');
-            $table->int('aantalPersonen');
+            $table->integer('aantalPersonen');
             $table->timestamps();
         });
     }

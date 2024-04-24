@@ -2,19 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Accomodaties;
+use App\Models\Boekingen;
 use Illuminate\Http\Request;
 
-class AccomodatiesController extends Controller
+class BoekingenController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        // Alle accomodaties ophalen
-        $accomodaties = Accomodaties::all();
-        return view('accomodatie', ['accomodaties' => $accomodaties]);
+        //
     }
 
     /**
@@ -36,7 +34,7 @@ class AccomodatiesController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Accomodaties $accomodaties)
+    public function show(Boekingen $boekingen)
     {
         //
     }
@@ -44,7 +42,7 @@ class AccomodatiesController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Accomodaties $accomodaties)
+    public function edit(Boekingen $boekingen)
     {
         //
     }
@@ -52,7 +50,7 @@ class AccomodatiesController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Accomodaties $accomodaties)
+    public function update(Request $request, Boekingen $boekingen)
     {
         //
     }
@@ -60,7 +58,7 @@ class AccomodatiesController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Accomodaties $accomodaties)
+    public function destroy(Boekingen $boekingen)
     {
         //
     }

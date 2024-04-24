@@ -12,7 +12,6 @@ class AttractiesController extends Controller
      */
     public function index()
     {
-        // alle attracties ophalen  en tonen in de view 
         $attracties = Attracties::all();
         return view('attracties', ['attracties' => $attracties]);
     }
@@ -30,7 +29,7 @@ class AttractiesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
@@ -38,7 +37,8 @@ class AttractiesController extends Controller
      */
     public function show(Attracties $attracties)
     {
-        //
+        $attracties = Attracties::all();
+        return view('attracties', ['attracties' => $attracties]);
     }
 
     /**

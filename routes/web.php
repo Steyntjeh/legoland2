@@ -28,9 +28,9 @@ Route::get('', function () {
     return view('Home');
 });
 
-Route::get('/attracties', [AttractiesController::class, 'index']);
+Route::get('/attracties', [AttractiesController::class, 'show']);
 
-Route::get('/details', [DetailsController::class, 'index']);
+Route::get('/attracties/{id}', [DetailsController::class, 'show'])->name('details');
 
 Route::get('/contact', function () {
     return view('Contact');

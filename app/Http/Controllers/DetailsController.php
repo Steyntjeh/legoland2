@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\details;
+use App\Models\Attracties;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class DetailsController extends Controller
 {
@@ -12,7 +13,7 @@ class DetailsController extends Controller
      */
     public function index()
     {
-        //
+        return view('details');
     }
 
     /**
@@ -34,9 +35,10 @@ class DetailsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(details $details)
+    public function show($id)
     {
-        //
+        $attractie = Attracties::find($id);
+        return view('details', ['attractie' => $attractie]);
     }
 
     /**

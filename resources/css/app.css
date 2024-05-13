@@ -379,6 +379,14 @@ footer {
         margin: 0px;
         padding-top: 10px;
     }
+
+    .details p a{
+        font-size: 20px;
+        font-weight: normal;
+        padding: 0px;
+        text-decoration: underline;
+        color: blue;
+    }
     
     main .hero {
         height: auto;

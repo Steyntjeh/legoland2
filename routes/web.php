@@ -63,3 +63,7 @@ Route::get('/aboutUs', function () {
 Route::get('/accomodatie', [AccomodatiesController::class, 'index']);
 
 Route::get('/boeken', [BoekingenController:: class, 'index']);
+
+Route::get('/login', function () {
+    return view('login');
+});

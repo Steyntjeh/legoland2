@@ -6,6 +6,7 @@ use App\Http\Controllers\AttractiesController;
 use App\Http\Controllers\DetailsController;
 use App\Http\Controllers\TicketsController;
 use App\http\Controllers\AccomodatiesController;
+use App\http\Controllers\AccoDetailsController;
 use App\http\Controllers\BoekingenController;
 
 
@@ -61,5 +62,7 @@ Route::get('/aboutUs', function () {
 });
 
 Route::get('/accomodatie', [AccomodatiesController::class, 'index']);
+
+Route::get('/accomodatie/{id}', [AccoDetailsController::class, 'show'])->name('accoDetails');
 
 Route::get('/boeken', [BoekingenController:: class, 'index']);

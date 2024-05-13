@@ -66,3 +66,7 @@ Route::get('/accomodatie', [AccomodatiesController::class, 'index']);
 Route::get('/accomodatie/{id}', [AccoDetailsController::class, 'show'])->name('accoDetails');
 
 Route::get('/boeken', [BoekingenController:: class, 'index']);
+
+Route::get('/login', function () {
+    return view('login');
+});

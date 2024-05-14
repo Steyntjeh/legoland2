@@ -9,7 +9,7 @@
                 <p>aantal personen: {{$accomodatie['aantalPersonen']}}</p>
                 <p>{{$accomodatie['informatie']}}</p>
                 <p>faciliteiten: {{$accomodatie['facilities']}}</p>
-                <p>kosten per nacht: {{$accomodatie['kostenPerNacht']}}</p>
+                <p>kosten per nacht: €{{$accomodatie['kostenPerNacht']}}</p>
                 <p>Bekijk <a href="/accomodatie">hier</a> de andere accomodaties</p>
             </div>
         @else

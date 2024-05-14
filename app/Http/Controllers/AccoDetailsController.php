@@ -37,8 +37,8 @@ class AccoDetailsController extends Controller
      */
     public function show($id)
     {
-        $accomodatie = Attracties::find($id);
-        return view('accoDetails', ['accomomodatie' => $accomodatie]);
+        $accomodatie = Accomodaties::find($id);
+        return view('accoDetails', ['accomodatie' => $accomodatie]);
     }
 
     /**

@@ -29,7 +29,13 @@ class BoekingenController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // order opslaan in database
+        $validatedData = $request->validate([
+            'naam' => 'required',
+            'email' => 'required',
+            'telefoonnummer' => 'required',
+            'aantal_personen' => 'required',
+        ]);
     }
 
     /**

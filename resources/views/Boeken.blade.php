@@ -22,7 +22,7 @@
                 <select name="kamers" id="kamertype" class="form-control">
                     <option value="">--Please choose an option--</option>
                     
-                    @foreach ($accomodaties as $accomodatie)
+                    @foreach ($accomodatie as $accomodatie)
                     <option value="accomodaties{{$accomodatie['type']}}" id="kamerType">{{$accomodatie['type']}}</option>
                     @endforeach
 

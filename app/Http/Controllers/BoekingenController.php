@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Boekingen;
+use App\Models\Accomodaties;
 use Illuminate\Http\Request;
 
 class BoekingenController extends Controller
@@ -13,7 +14,7 @@ class BoekingenController extends Controller
     public function index()
     {
         $accomodaties = Accomodaties::all();
-        return view('accomodaties', ['accomodaties' => $accomodaties]);
+        return view('accomodatie', ['accomodatie' => $accomodaties]);
     }
 
     /**
@@ -44,6 +45,8 @@ class BoekingenController extends Controller
         $boeking -> naam = $validatedData['naam'];
         $boeking -> email = $validatedData['email'];
         $boeking -> telefoonnummer = $validatedData['telefoonnummer'];
+        $boeking -> aankomst = $validatedData['aankomst'];
+        $boeking -> vertrek = $validatedData['vertrek'];
         $boeking -> aantal_personen = $validatedData['aantal_personen']; 
 
         $boeking->save();

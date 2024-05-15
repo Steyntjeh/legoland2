@@ -3,7 +3,7 @@
     <main>
         <h1>Boeken</h1>
 
-    <form action="/boeken/insert" method="post">
+    <form action="/boeken/insert" method="POST">
         @csrf
         <div class="form-group">
             <label for="naam">Naam*</label>
@@ -19,17 +19,14 @@
         </div>   
         <div class="form-group">
             <label for="kamertype">Kamertype*</label>
-            <select>
-                <option>
-                    <select name="kamers" id="kamertype">
-                        <option value="">--Please choose an option--</option>
-                        <option value="vierPersonen">Huisje 4 personen</option>
-                        <option value="zesPersonen">Huisje 6 personen</option>
-                        <option value="tienPersonen">Huisje 10 personen</option>
-                        <option value="hotel">Hotel</option>
-                    </select>
-                </option>
-            </select>
+                <select name="kamers" id="kamertype" class="form-control">
+                    <option value="">--Please choose an option--</option>
+                    
+                    @foreach ($accomodaties as $accomodatie)
+                    <option value="accomodaties{{$accomodatie['type']}}" id="kamerType">{{$accomodatie['type']}}</option>
+                    @endforeach
+
+                </select>
         </div>
         <div class="form-group">
             <label for="aankomst">Aankomst datum*</label>

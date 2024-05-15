@@ -12,7 +12,8 @@ class BoekingenController extends Controller
      */
     public function index()
     {
-        //
+        $accomodaties = Accomodaties::all();
+        return view('accomodaties', ['accomodaties' => $accomodaties]);
     }
 
     /**

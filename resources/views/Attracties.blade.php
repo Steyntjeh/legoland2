@@ -7,7 +7,7 @@
             <h1 class="h1ComingSoon">Coming Soon...</h1>
         </div>
         <div class="cardSection">
-        <!-- Alle attractie cards -->
+        <!-- Alle attractie cards --> 
         @foreach($attracties as $attractie)
         <div class="cards">
             <img src="{{$attractie['image']}}" alt="">

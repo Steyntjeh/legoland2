@@ -34,8 +34,22 @@ class BoekingenController extends Controller
             'naam' => 'required',
             'email' => 'required',
             'telefoonnummer' => 'required',
-            'aantal_personen' => 'required',
+            'aankomst' => 'required',
+            'vertrek' => 'required',
+            'aantal_personen' => 'required'
         ]);
+
+        $boeking = new Boekingen();
+
+        $boeking -> naam = $validatedData['naam'];
+        $boeking -> email = $validatedData['email'];
+        $boeking -> telefoonnummer = $validatedData['telefoonnummer'];
+        $boeking -> aantal_personen = $validatedData['aantal_personen']; 
+
+        $boeking->save();
+
+        return redirect('/geboekt');
+
     }
 
     /**

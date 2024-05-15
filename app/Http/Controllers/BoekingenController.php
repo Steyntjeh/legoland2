@@ -13,8 +13,8 @@ class BoekingenController extends Controller
      */
     public function index()
     {
-        $accomodaties = Accomodaties::all();
-        return view('accomodatie', ['accomodatie' => $accomodaties]);
+        $accomodatie = Accomodaties::all();
+        return view('boeken', ['accomodatie' => $accomodatie]);
     }
 
     /**

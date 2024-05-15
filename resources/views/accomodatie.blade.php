@@ -4,7 +4,7 @@
     <h1>Accomodaties</h1>
 
     <div class="cardSection">
-        <!-- Alle attractie cards -->
+        <!-- Alle accomodatie cards -->
         @foreach($accomodaties as $accomodatie)
         <div class="cards">
             <img src="{{$accomodatie['image']}}" alt="">

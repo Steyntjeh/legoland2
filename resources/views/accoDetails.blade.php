@@ -10,7 +10,7 @@
                 <p>{{$accomodatie['informatie']}}</p>
                 <p>faciliteiten: {{$accomodatie['facilities']}}</p>
                 <p>kosten per nacht: €{{$accomodatie['kostenPerNacht']}}</p>
-                <p>Boek <a href="/boeken">hier</a> uw accomodatie</p>
+                <p>Boek <a href="/boeken">hier</a> uw accomodatie of ga <a href="/accomodatie">hier</a> terug naar de rest van de accomodaties</p>
             </div>
         @else
             <p>Accomodatie niet gevonden.</p>

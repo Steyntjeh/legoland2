@@ -70,7 +70,7 @@ Route::get('/boeken', [BoekingenController::class, 'index']);
 Route::post('/boeken/insert', [BoekingenController::class, 'store']);
 
 Route::get('/geboekt', function () {
-    return view('Geboekt');
+    return view('geboekt');
 });
 
 Route::get('/login', function () {

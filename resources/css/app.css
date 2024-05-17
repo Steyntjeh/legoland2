@@ -20,7 +20,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
+}
   
 .menu {
     list-style-type: none;
@@ -51,11 +51,10 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .menu.active li{
-    display: flex;
-    justify-content: center;
     padding-top: 10px;
     padding-bottom: 10px;
 }

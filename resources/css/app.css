@@ -14,9 +14,8 @@ img {
 
 .navbar {
     background-image: url('../../public/Bestanden/images/navBackground.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
@@ -27,22 +26,14 @@ img {
     list-style-type: none;
     padding: 0;
     margin: 0;
-
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
   
 .menu li {
-    padding: 10px 0;
-    margin: 5px 5px;
-
-    background-color: cornflowerblue;
     color: white;
-
-    border: 1px solid black;
     border-radius: 10px;
-
     width: auto;
 }
 
@@ -55,36 +46,81 @@ img {
     text-decoration: none;
 }
 
+.menu.active{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menu.active li{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.menu li a{
+    color: black;
+    text-decoration: none;
+    font-family: 'arial';
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.hamburger{
+    border: none;
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: unset;
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 3px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+}
+
 main .hero {
     height: auto;
     width: 95%;
-
     margin-bottom: 30px;
     margin: 10px;
-
     background-image: url("../../public/Bestanden/images/bannerAboutUs.jpg");
     background-repeat: no-repeat;
-
     display: flex;
     flex-direction: column;
 }
 
 .hero h2 {
     color: cornflowerblue;
-
     margin-left: 20px;
     margin-top: 30px;
-
     text-align: center;
 }
 
 .hero p {
     width: 300px;
     height: auto;
-
     margin-left: 50px;
     margin-top: 20px;
-    
     text-align: center;
 }
 
@@ -92,15 +128,11 @@ main .hero {
     margin-top: 20px;
     margin-left: 100px;
     margin-bottom: 30px;
-
     height: 40px;
     width: 220px;
-
     border: 1px solid black;
     border-radius: 10px;
-
     background-color: cornflowerblue;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -112,40 +144,32 @@ main .hero {
 
 a{
     text-decoration: none;
-
     padding: 10px;
-
     color: black;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 14px;
 }
 
 main {
     height: 100%;
     margin: 10px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
-
     text-align: center;
 }
 
 main h1 {
     color: cornflowerblue;
-
     margin-top: 10px;
     margin-bottom: 30px;
-
     text-align: center;
 }
 
 .form-group {
     margin: 20px;
     padding: 19px;
-
     font-weight: bold;
-   
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -154,20 +178,15 @@ main h1 {
 .form-group input {
     width: 100px;
     height: 50px;
-
     font-size: 20px;
-
     margin: 10px;
 }
 
 button {
     height: 48px;
     width: 100px;
-
     font-weight: bold;
-
     background-color: yellow;
-
     border: 1px solid black;
     border-radius: 10px;
 }
@@ -176,7 +195,6 @@ section {
     width: auto;
     margin-top: 30px;
     margin-bottom: 35px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -184,24 +202,19 @@ section {
 
 section h1 {
     color: cornflowerblue;
-
     font-weight: 900;
     font-size: 40px;
-
     margin-top: 30px;
     margin-bottom: 20px;
 }
 
 section p {
     margin: 5px;
-
     font-size: 20px;
-
 }
 
 textarea {
     resize: none;
-
     height: 100px;
     width: 300px;
 }
@@ -220,7 +233,6 @@ textarea {
 
 .bijzonderheden {
     width: 400px;
-    
     text-align: center;
 }
 
@@ -228,8 +240,7 @@ textarea {
     margin-top: 16px;
 }
 
-.bannerComingSoon
-{
+.bannerComingSoon{
     display: none;
 }
 
@@ -238,19 +249,15 @@ textarea {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    
     max-width: 400px;
 }
 
 .cards {
     width: 300px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
-
     margin: 20px;
-
     border: 1px solid black;
     border-radius: 10px;
 }
@@ -258,7 +265,6 @@ textarea {
 .cards img {
     margin-top: 0;
     margin-bottom: 5px;
-
     height: 320px;
     width: 100%;
 }
@@ -275,13 +281,11 @@ textarea {
     display: flex;
     justify-content: center;
     align-items: center;
-
     flex-direction: column;
 }
 
 .besteld {
     height: 558px;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -304,20 +308,15 @@ textarea {
 
 .bestelling {
     font-size: 70px;
-
     color: cornflowerblue;
-
     margin-top: 30px;
 }
-
 
 footer {
     background-image: url('../../public/Bestanden/images/footerImage.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-
     height: 200px;
-
     color: white;
 }
 
@@ -340,11 +339,9 @@ footer {
         background-image: url('../../public/Bestanden/images/navBackground.jpg');
         background-repeat: no-repeat;
         background-size: cover;
-    
         display: flex;
         justify-content: space-between;
         align-items: center;
-    
         height: 90px;
         width: auto;
     }
@@ -391,30 +388,24 @@ footer {
     main .hero {
         height: auto;
         width: 100%;
-    
         margin-bottom: 30px;
         margin: 10px;
-    
         background-image: url("../../public/Bestanden/images/bannerAboutUs.jpg");
         background-repeat: no-repeat;
-    
         display: flex;
         flex-direction: column;
     }
     
     .hero h2 {
         color: cornflowerblue;
-    
         margin-left: 200px;
         margin-top: 30px;
-    
         text-align: left;
     }
     
     .hero p {
         width: 400px;
         height: auto;
-    
         margin-left: 50px;
         margin-top: 20px;
         
@@ -424,15 +415,11 @@ footer {
         margin-top: 20px;
         margin-left: 150px;
         margin-bottom: 30px;
-    
         height: 40px;
         width: 220px;
-    
         border: 1px solid black;
         border-radius: 10px;
-    
         background-color: cornflowerblue;
-    
         display: flex;
         justify-content: center;
         align-items: center;
@@ -445,46 +432,37 @@ footer {
     .navbar ul {
         display: flex;
         flex-direction: row;
-    
         list-style-type: none;
     }
     
     a{
         text-decoration: none;
-    
         padding: 10px;
-    
         color: black;
         font-weight: bold;
-        font-size: 30px;
+        font-size: 18px;
     }
     
     main {
         height: 100%;
         margin: 10px;
-    
         display: flex;
         flex-direction: column;
         align-items: center;
-    
         text-align: center;
     }
     
     main h1 {
         color: cornflowerblue;
-    
         margin-top: 15px;
         margin-bottom: 30px;
-    
         text-align: center;
     }
     
     .form-group {
         margin: 20px;
         padding: 19px;
-    
         font-weight: bold;
-       
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -493,29 +471,22 @@ footer {
     .form-group input {
         width: 280px;
         height: 50px;
-    
         font-size: 20px;
-    
         margin: 10px;
     }
 
     .form-group select {
         width: 280px;
         height: 50px;
-    
         font-size: 20px;
-    
         margin: 10px;
     }
     
     button {
         height: 48px;
         width: 100px;
-    
         font-weight: bold;
-    
         background-color: yellow;
-    
         border: 1px solid black;
         border-radius: 10px;
         cursor: pointer;
@@ -525,7 +496,6 @@ footer {
         width: 100%;
         margin-top: 30px;
         margin-bottom: 35px;
-    
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -533,24 +503,20 @@ footer {
     
     section h1 {
         color: cornflowerblue;
-    
         font-weight: 900;
         font-size: 40px;
-    
         margin-top: 30px;
         margin-bottom: 20px;
     }
     
     section p {
         margin: 5px;
-    
         font-size: 20px;
     
     }
     
     textarea {
         resize: none;
-    
         height: 100px;
         width: 300px;
     }
@@ -569,7 +535,6 @@ footer {
     
     .bijzonderheden {
         width: 400px;
-        
         text-align: center;
     }
     
@@ -581,10 +546,8 @@ footer {
         background-image: url('../../public/Bestanden/images/bannerComingSoon.jpg');
         background-repeat: no-repeat;
         background-size: cover;
-    
         height: 300px;
         width: 100%;
-    
         display: flex;
         align-items: center;
         justify-content: center;
@@ -594,28 +557,22 @@ footer {
         color: white;
         background-color: red;
         border: 10px solid white;
-    
         font-size: 100px;
-    
         opacity:  0.6;
     }
     
     .cardSection {
         display: flex;
         flex-wrap: wrap;
-        
         max-width: 90%;
     }
     
     .cards {
         width: 300px;
-    
         display: flex;
         flex-direction: column;
         align-items: center;
-    
         margin: 20px;
-    
         border: 1px solid black;
         border-radius: 10px;
     }
@@ -623,10 +580,8 @@ footer {
     .cards img {
         margin-top: 0;
         margin-bottom: 5px;
-    
         height: 320px;
         width: 100%;
-
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
     }
@@ -643,13 +598,11 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-    
         flex-direction: column;
     }
     
     .besteld {
         height: 558px;
-    
         display: flex;
         justify-content: center;
         align-items: center;
@@ -670,9 +623,7 @@ footer {
     
     .bestelling {
         font-size: 70px;
-    
         color: cornflowerblue;
-    
         margin-top: 30px;
     }
     
@@ -680,10 +631,16 @@ footer {
         background-image: url('../../public/Bestanden/images/footerImage.jpg');
         background-size: cover;
         background-repeat: no-repeat;
-    
         height: 200px;
-    
         color: white;
     }
-    
+}
+
+@media screen and (max-width:900px) {
+    .hamburger{ 
+        display: flex;
+    }
+    .menu{
+        display: none;
+    }
 }

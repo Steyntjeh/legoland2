@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Legoland Doetinchem</title>
-    @vite(['resources/js/app.js', 'resources/css/app.css'])
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    @vite(['resources/js/app.js', 'resources/js/script.js', 'resources/css/app.css'])
 </head>
 <body>
 
@@ -21,6 +22,11 @@
     <li><a href="/accomodatie">Accomodaties</a></li>
     <li><a href="/login">Login</a></li>
   </ul>
+  <div class="hamburger" id="hamburger">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
 </div>
     <div class="container">
         @yield('content')

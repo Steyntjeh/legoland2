@@ -7,7 +7,7 @@
         @csrf
         <div class="form-group">
             <label for="naam">Naam*</label>
-            <input type="text" name="voornaam" id="voornaam" class="form-control" placeholder="Voor en Achternaam...">
+            <input type="text" name="naam" id="naam" class="form-control" placeholder="Voor en Achternaam...">
         </div>
         <div class="form-group">
             <label for="naam">Email*</label>

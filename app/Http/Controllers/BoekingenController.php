@@ -37,7 +37,7 @@ class BoekingenController extends Controller
             'telefoonnummer' => 'required',
             'aankomst' => 'required',
             'vertrek' => 'required',
-            'aantal_personen' => 'required'
+            'aantalPersonen' => 'required'
         ]);
 
         $boeking = new Boekingen();
@@ -47,7 +47,7 @@ class BoekingenController extends Controller
         $boeking -> telefoonnummer = $validatedData['telefoonnummer'];
         $boeking -> aankomst = $validatedData['aankomst'];
         $boeking -> vertrek = $validatedData['vertrek'];
-        $boeking -> aantal_personen = $validatedData['aantal_personen']; 
+        $boeking -> aantalPersonen = $validatedData['aantalPersonen']; 
 
         $boeking->save();
 

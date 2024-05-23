@@ -35,6 +35,7 @@ class BoekingenController extends Controller
             'naam' => 'required',
             'email' => 'required',
             'telefoonnummer' => 'required',
+            'kamertype' => 'required|string',
             'aankomst' => 'required',
             'vertrek' => 'required',
             'aantalPersonen' => 'required'
@@ -45,6 +46,7 @@ class BoekingenController extends Controller
         $boeking -> naam = $validatedData['naam'];
         $boeking -> email = $validatedData['email'];
         $boeking -> telefoonnummer = $validatedData['telefoonnummer'];
+        $boeking -> kamertype = $validatedData['kamertype'];
         $boeking -> aankomst = $validatedData['aankomst'];
         $boeking -> vertrek = $validatedData['vertrek'];
         $boeking -> aantalPersonen = $validatedData['aantalPersonen']; 

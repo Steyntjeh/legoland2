@@ -15,15 +15,15 @@
         </div>
         <div class="form-group">
             <label for="telefoonnummer">Telefoonnummer*</label>
-            <input type="tel" name="telefoonnummer" id="telefoonnummer" class="form-control" placeholder="Telefoonnummer...">
+            <input type="text" name="telefoonnummer" id="telefoonnummer" class="form-control" placeholder="Telefoonnummer...">
         </div>   
         <div class="form-group">
             <label for="kamertype">Kamertype*</label>
-                <select name="kamers" id="kamertype" class="form-control">
+                <select name="kamertype" id="kamertype" class="form-control">
                     <option value="">--Please choose an option--</option>
                     
                     @foreach ($accomodatie as $accomodatie)
-                    <option value="accomodaties{{$accomodatie['type']}}" id="kamerType">{{$accomodatie['type']}}</option>
+                    <option value="{{$accomodatie['type']}}" >{{$accomodatie['type']}}</option>
                     @endforeach
 
                 </select>

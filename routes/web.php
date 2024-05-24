@@ -8,6 +8,7 @@ use App\Http\Controllers\TicketsController;
 use App\http\Controllers\AccomodatiesController;
 use App\http\Controllers\AccoDetailsController;
 use App\http\Controllers\BoekingenController;
+use App\http\Controllers\AuthController;
 
 
 /*
@@ -73,6 +74,18 @@ Route::get('/geboekt', function () {
     return view('geboekt');
 });
 
-Route::get('/login', function () {
-    return view('login');
+Route::middleware('auth')->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    });
 });
+ 
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+
+Route::post('/login', [AuthController::class, 'login']);
+
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+ 
+Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('register');
+
+Route::post('/register', [AuthController::class, 'register']);

@@ -21,6 +21,8 @@
     <li><a href="/tickets">Tickets</a></li>
     <li><a href="/accomodatie">Accomodaties</a></li>
     <li><a href="/login">Login</a></li>
+    <li><a href="/register">Register</a></li>
+    <li><a href="/logout">Logout</a></li>
   </ul>
   <div class="hamburger" id="hamburger">
     <span class="bar"></span>

@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('naam');
             $table->string('email');
-            $table->integer('telefoonNummer');
+            $table->string('telefoonNummer');
             $table->string('kamerType');
             $table->date('aankomst');
             $table->date('vertrek');

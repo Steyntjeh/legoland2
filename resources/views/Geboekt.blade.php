@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
-<div class="container succesPagina">
+<div class="container succesPagina page">
     <h1 class="bestelling">Bestelling</h1>
     <div class="besteld">
         <p>Uw accomodatie is succesvol gereserveerd</p>

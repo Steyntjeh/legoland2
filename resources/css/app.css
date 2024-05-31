@@ -11,6 +11,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    overflow-x: hidden;
 }
 
 img {
@@ -327,12 +328,14 @@ footer {
     color: white;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 @media screen and (min-width: 960px) {
 
     body {
         font-family: Helvetica, sans-serif;
+        height: 100%;
         width: auto;
     }
     
@@ -640,7 +643,7 @@ footer {
         background-image: url('../../public/Bestanden/images/footerImage.jpg');
         background-size: cover;
         background-repeat: no-repeat;
-        height: 200px;
+        height: 100px;
         color: white;
     }
 }

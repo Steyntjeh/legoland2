@@ -30,11 +30,11 @@
         </div>
         <div class="form-group">
             <label for="aankomst">Aankomst datum*</label>
-            <input type="date" name="aankomst" id="aankomst" class="form-control" placeholder="dd/mm/yyyy">
+            <input type="date" name="aankomst" id="aankomst" class="form-control" min="<?php echo date('Y-m-d'); ?>" placeholder="dd/mm/yyyy">
         </div>   
         <div class="form-group">
             <label for="vertrek">Vertrek datum*</label>
-            <input type="date" name="vertrek" id="vertrek" class="form-control" placeholder="dd/mm/yyyy">
+            <input type="date" name="vertrek" id="vertrek" class="form-control" min="<?php echo date('Y-m-d'); ?>" placeholder="dd/mm/yyyy">
         </div>
         <div class="form-group">
             <label for="aantalPersonen">Aantal personen*</label>

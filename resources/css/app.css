@@ -6,7 +6,6 @@
 body {
     font-family: Helvetica, sans-serif;
     width: 100%;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -319,6 +318,11 @@ textarea {
     margin-top: 30px;
 }
 
+.container .dashboard{
+    margin-top: 53.3%;
+    margin-bottom: 53.2%;
+}
+
 footer {
     background-image: url('../../public/Bestanden/images/footerImage.jpg');
     background-size: cover;
@@ -335,7 +339,6 @@ footer {
 
     body {
         font-family: Helvetica, sans-serif;
-        height: 100%;
         width: auto;
     }
     

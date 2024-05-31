@@ -14,17 +14,18 @@
 
        <a href="/"><img src="../Bestanden/LEGOLAND_PARKS_LOGO.svg" alt="Legoland logo"></a>
   <ul class="menu" id="menu">
+    @guest
     <li><a href="/contact">Contact</a></li>
     <li><a href="/aboutUs">About Us</a></li>
     <li><a href="/openingstijden">Openingstijden</a></li>
     <li><a href="/attracties">Attracties</a></li>
     <li><a href="/tickets">Tickets</a></li>
     <li><a href="/accomodatie">Accomodaties</a></li>
-    @guest
-        <li><a href="/login">Login</a></li>
-        <li><a href="/register">Register</a></li>
+    <li><a href="/login">Login</a></li>
     @endguest
     @auth
+        <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/register">Register</a></li>
         <li><a href="/logout">Logout</a></li>
     @endauth
   </ul>

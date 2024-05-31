@@ -23,12 +23,12 @@ class AuthController extends Controller
             'password' => 'required',
         ]);
         $credentials = $request->only('email', 'password');
-
+        $loggedin = false;
         // attempt to log the user in
         if (Auth::attempt($credentials)) {
             // Login success
             return redirect()->intended('/dashboard');
-            $request->session()->push('/dashboard', 'logged in');
+            $loggedin = true;
         }
 
         // login failed

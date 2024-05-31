@@ -20,9 +20,13 @@
     <li><a href="/attracties">Attracties</a></li>
     <li><a href="/tickets">Tickets</a></li>
     <li><a href="/accomodatie">Accomodaties</a></li>
-    <li><a href="/login">Login</a></li>
-    <li><a href="/register">Register</a></li>
-    <li><a href="/logout">Logout</a></li>
+    @guest
+        <li><a href="/login">Login</a></li>
+        <li><a href="/register">Register</a></li>
+    @endguest
+    @auth
+        <li><a href="/logout">Logout</a></li>
+    @endauth
   </ul>
   <div class="hamburger" id="hamburger">
     <span class="bar"></span>

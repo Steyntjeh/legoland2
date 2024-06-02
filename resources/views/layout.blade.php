@@ -26,6 +26,7 @@
     @endguest
     @auth
         <li><a href="/contact">Contacten</a></li>
+        <li><a href="/contact">Boekingen</a></li>
         <li><a href="/dashboard">Dashboard</a></li>
         <li><a href="/logout">Logout</a></li>
     @endauth

@@ -91,3 +91,7 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('register');
 
 Route::post('/register', [AuthController::class, 'register']);
+
+Route::get('/contactOverzicht', [ContactOverzichtController::class, 'index']);
+
+Route::get('/boekOverzicht', [BoekOverzichtController::class, 'index']);

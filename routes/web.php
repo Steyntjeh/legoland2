@@ -9,6 +9,8 @@ use App\http\Controllers\AccomodatiesController;
 use App\http\Controllers\AccoDetailsController;
 use App\http\Controllers\BoekingenController;
 use App\http\Controllers\AuthController;
+use App\Http\Controllers\BoekOverzichtController;
+use App\Http\Controllers\ContactOverzichtController;
 
 
 /*

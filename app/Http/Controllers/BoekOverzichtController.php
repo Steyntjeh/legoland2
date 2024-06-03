@@ -12,7 +12,7 @@ class BoekOverzichtController extends Controller
      */
     public function index()
     {
-        //
+        return view('boekOverzicht');
     }
 
     /**

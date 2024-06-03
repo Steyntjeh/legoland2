@@ -24,8 +24,8 @@
         <li><a href="/login">Login</a></li>
     @endguest
     @auth
-        <li><a href="/contact">Contacten</a></li>
-        <li><a href="/contact">Boekingen</a></li>
+        <li><a href="/contactOverzicht">Contacten</a></li>
+        <li><a href="/boekOverzicht">Boekingen</a></li>
         <li><a href="/dashboard">Dashboard</a></li>
         <li><a href="/register">Register</a></li>
         <li><a href="/logout">Logout</a></li>

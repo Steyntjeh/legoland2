@@ -11,6 +11,7 @@ use App\http\Controllers\BoekingenController;
 use App\http\Controllers\AuthController;
 use App\Http\Controllers\BoekOverzichtController;
 use App\Http\Controllers\ContactOverzichtController;
+use App\Http\Controllers\AccomodatieOverzichtController;
 
 
 /*
@@ -95,3 +96,5 @@ Route::post('/register', [AuthController::class, 'register']);
 Route::get('/contactOverzicht', [ContactOverzichtController::class, 'index']);
 
 Route::get('/boekOverzicht', [BoekOverzichtController::class, 'index']);
+
+Route::get('/accomodatieOverzicht', [accomodatieOverzichtController::class, 'index']);

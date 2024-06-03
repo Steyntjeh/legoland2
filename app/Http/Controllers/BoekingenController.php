@@ -30,16 +30,20 @@ class BoekingenController extends Controller
      */
     public function store(Request $request)
     {
+        $messages = [
+            'vertrek.after' => 'De vertrekdatum moet later zijn dan de aankomstdatum.',
+        ];
+
         // order opslaan in database
         $validatedData = $request->validate([
             'naam' => 'required',
             'email' => 'required',
             'telefoonnummer' => 'required',
             'kamertype' => 'required|string',
-            'aankomst' => 'required',
-            'vertrek' => 'required',
+            'aankomst' => 'required|date',
+            'vertrek' => 'required|date|after:aankomst',
             'aantalPersonen' => 'required'
-        ]);
+        ], $messages);
 
         $boeking = new Boekingen();
 

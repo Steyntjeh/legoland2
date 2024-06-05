@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\accomodatiesOverzicht;
+use App\Models\Accomodaties;
 use Illuminate\Http\Request;
 
 class AccomodatieOverzichtController extends Controller
@@ -12,7 +13,8 @@ class AccomodatieOverzichtController extends Controller
      */
     public function index()
     {
-        return view('accomodatieOverzicht');
+        $accomodaties = Accomodaties::all();
+        return view('accomodatieOverzicht', ['accomodaties' => $accomodaties]);
     }
 
     /**

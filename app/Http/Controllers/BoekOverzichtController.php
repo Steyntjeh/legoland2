@@ -12,7 +12,7 @@ class BoekOverzichtController extends Controller
      */
     public function index()
     {
-        $boekingen = BoekOverzicht::all();
+        $boekingen = Boekingen::all();
         return view('boekOverzicht', ['accomodaties' => $boekingen]);
     }
 

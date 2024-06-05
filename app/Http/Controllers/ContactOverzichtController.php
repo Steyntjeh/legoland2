@@ -12,7 +12,7 @@ class ContactOverzichtController extends Controller
      */
     public function index()
     {
-        $contacten = ContactOverzicht::all();
+        $contacten = Contacts::all();
         return view('contactOverzicht', ['contacten' => $contacten]);
     }
 

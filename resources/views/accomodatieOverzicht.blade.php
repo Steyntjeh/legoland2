@@ -1,7 +1,7 @@
 @extends('layout')
 @section('content')
 <main>
-    <table border="1">
+    <table>
       <thead>
         <tr>
             <th>type</th>

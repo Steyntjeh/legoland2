@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\boekOverzicht;
+use App\Models\Boekingen;
 use Illuminate\Http\Request;
 
 class BoekOverzichtController extends Controller
@@ -13,7 +14,7 @@ class BoekOverzichtController extends Controller
     public function index()
     {
         $boekingen = Boekingen::all();
-        return view('boekOverzicht', ['accomodaties' => $boekingen]);
+        return view('boekOverzicht', ['boekingen' => $boekingen]);
     }
 
     /**

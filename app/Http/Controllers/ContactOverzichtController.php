@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\contactOverzicht;
+use App\Models\Contact;
 use Illuminate\Http\Request;
 
 class ContactOverzichtController extends Controller
@@ -12,7 +13,7 @@ class ContactOverzichtController extends Controller
      */
     public function index()
     {
-        $contacten = Contacts::all();
+        $contacten = Contact::all();
         return view('contactOverzicht', ['contacten' => $contacten]);
     }
 

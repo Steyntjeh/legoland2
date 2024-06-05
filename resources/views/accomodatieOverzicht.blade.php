@@ -8,8 +8,8 @@
             <th>aantal personen</th>
             <th>kosten per nacht</th>
             <th>informatie</th>
-            <th>facilities</th>
-            <th>image</th>
+            <th>faciliteiten</th>
+            <th>foto</th>
         </tr>
       </thead>
       <tbody>

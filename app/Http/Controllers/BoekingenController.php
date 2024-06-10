@@ -58,7 +58,6 @@ class BoekingenController extends Controller
         $boeking->save();
 
         return redirect('/geboekt');
-
     }
 
     /**

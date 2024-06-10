@@ -30,7 +30,27 @@ class AccomodatieOverzichtController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'type' => 'required|string',
+            'aantalPersonen' => 'required',
+            'kostenPerNacht' => 'required',
+            'informatie' => 'required|string',
+            'facilities' => 'required|string',
+            'imageUrl' => 'required|string'
+        ]);
+
+        $accomodaties = new Accomodaties();
+
+        $accomodaties -> type = $validatedData['type'];
+        $accomodaties -> aantalPersonen = $validatedData['aantalPersonen'];
+        $accomodaties -> kostenPerNacht = $validatedData['kostenPerNacht'];
+        $accomodaties -> informatie = $validatedData['informatie'];
+        $accomodaties -> facilities = $validatedData['facilities'];
+        $accomodaties -> image = $validatedData['imageUrl'];
+
+        $accomodaties->save();
+
+        return redirect('/accomodatieOverzicht');
     }
 
     /**

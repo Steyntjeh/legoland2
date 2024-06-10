@@ -98,3 +98,5 @@ Route::get('/contactOverzicht', [ContactOverzichtController::class, 'index']);
 Route::get('/boekOverzicht', [BoekOverzichtController::class, 'index']);
 
 Route::get('/accomodatieOverzicht', [accomodatieOverzichtController::class, 'index']);
+
+Route::post('/accomodatieOverzicht', [AccomodatieOverzichtController::class, 'store']);

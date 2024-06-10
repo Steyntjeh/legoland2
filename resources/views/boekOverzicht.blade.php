@@ -1,6 +1,9 @@
 @extends('layout')
 @section('content')
     <main>
+        <section>
+            <h1>Boekingen</h1>
+            <p>Hier is een overzicht met alle boekingen.</p>
         <table>
             <tr>
                 <th>Boekingnummer</th>
@@ -25,5 +28,6 @@
                 </tr>
             @endforeach
         </table>
+        </section>
     </main>
 @endsection

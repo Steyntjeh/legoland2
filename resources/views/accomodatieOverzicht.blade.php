@@ -1,6 +1,9 @@
 @extends('layout')
 @section('content')
 <main>
+  <section>
+    <h1>Accomodaties</h1>
+    <p>Hier is een overzicht met alle accomodaties.</p>
     <table>
       <thead>
         <tr>
@@ -23,7 +26,11 @@
             <td>{{$accomodatie['image']}}</td>
         </tr>
         @endforeach
+        <tr class="addButton">
+          <td><button>+ Add New</button></td>
+        </tr>
       </tbody>
     </table>
+    </section>
 </main>
 @endsection

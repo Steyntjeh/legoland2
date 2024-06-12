@@ -21,6 +21,9 @@
             <td>{{$accomodatie['image']}}</td>
         </tr>
         @endforeach
+        <tr>
+            <th><button href="#">+ Add new</button></th>
+        </tr>
       </tbody>
     </table>
     <form action="/accomodatieOverzicht" method="post">

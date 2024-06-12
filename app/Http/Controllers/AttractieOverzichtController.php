@@ -12,7 +12,8 @@ class AttractieOverzichtController extends Controller
      */
     public function index()
     {
-        //
+        $attracties = Attracties::all();
+        return view('attracties', ['attracties' => $attracties]);
     }
 
     /**

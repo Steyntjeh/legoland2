@@ -6,21 +6,17 @@
         <table>
         <tbody>
             <tr>
-                <th>Voornaam</th>
-                <th>Achternaam</th>
-                <th>Email</th>
-                <th>Telefoonnummer</th>
-                <th>Bericht</th>
-                <th>Order nummer</th>
+                <th>Ticket prijs</th>
+                <th>Ticket soort</th>
+                <th>Delete</th>
+                <th>Edit</th>
             </tr>
-            @foreach($contacten as $contact)
+            @foreach($tickets as $tickett)
                 <tr>
-                    <td>{{$contact['voornaam']}}</td>
-                    <td>{{$contact['achternaam']}}</td>
-                    <td>{{$contact['Email']}}</td>
-                    <td>{{$contact['telefoonNummer']}}</td>
-                    <td>{{$contact['bericht']}}</td>
-                    <td>{{$contact['orderNummer']}}</td>
+                    <td>{{$ticket['ticketPrijs']}}</td>
+                    <td>{{$itcket['ticketSoort']}}</td>
+                    <td><button>Edit</button></td>
+                    <td><button>Delete</button></td>
                 </tr>
             @endforeach 
                 <tr>

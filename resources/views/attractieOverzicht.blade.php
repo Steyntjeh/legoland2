@@ -6,21 +6,25 @@
         <table>
         <tbody>
             <tr>
-                <th>Voornaam</th>
-                <th>Achternaam</th>
-                <th>Email</th>
-                <th>Telefoonnummer</th>
-                <th>Bericht</th>
-                <th>Order nummer</th>
+                <th>Naam Attractie</th>
+                <th>Tijdsduur</th>
+                <th>Informatie</th>
+                <th>Lengte</th>
+                <th>Image url</th>
+                <th>Minimale lengte</th>
+                <th>Edit</th>
+                <th>Delete</th>
             </tr>
-            @foreach($contacten as $contact)
+            @foreach($attracties as $attractie)
                 <tr>
-                    <td>{{$contact['voornaam']}}</td>
-                    <td>{{$contact['achternaam']}}</td>
-                    <td>{{$contact['Email']}}</td>
-                    <td>{{$contact['telefoonNummer']}}</td>
-                    <td>{{$contact['bericht']}}</td>
-                    <td>{{$contact['orderNummer']}}</td>
+                    <td>{{$attractie['naamAttractie']}}</td>
+                    <td>{{$attractie['tijdsDuur']}}</td>
+                    <td>{{$attractie['informatie']}}</td>
+                    <td>{{$attractie['lengte']}}</td>
+                    <td>{{$attractie['image']}}</td>
+                    <td>{{$attractie['minimaleLengte']}}</td>
+                    <td><button>Edit</button></td>
+                    <td><button>Delete</button></td>
                 </tr>
             @endforeach 
                 <tr>

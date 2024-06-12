@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\AttractieOverzicht;
+use App\Models\Attracties;
 use Illuminate\Http\Request;
 
 class AttractieOverzichtController extends Controller

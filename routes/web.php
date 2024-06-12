@@ -12,6 +12,8 @@ use App\http\Controllers\AuthController;
 use App\Http\Controllers\BoekOverzichtController;
 use App\Http\Controllers\ContactOverzichtController;
 use App\Http\Controllers\AccomodatieOverzichtController;
+use App\http\Controllers\AttractieOverzichtController;
+use App\http\Controllers\TicketOverzichtController;
 
 
 /*
@@ -100,3 +102,7 @@ Route::get('/boekOverzicht', [BoekOverzichtController::class, 'index']);
 Route::get('/accomodatieOverzicht', [accomodatieOverzichtController::class, 'index']);
 
 Route::post('/accomodatieOverzicht', [AccomodatieOverzichtController::class, 'store']);
+
+Route::get('/ticketOverzicht', [TicketOverzichtController::class, 'index']);
+
+Route::get('/attractieOverzicht', [AttractieOverzichtController::class, 'index']);

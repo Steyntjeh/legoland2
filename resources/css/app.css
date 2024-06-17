@@ -5,11 +5,14 @@
 
 body {
     font-family: Helvetica, sans-serif;
+
     width: 100%;
+    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    
     overflow-x: hidden;
 }
 
@@ -20,10 +23,13 @@ img {
 
 .navbar {
     width: 100vw;
+    
     background-image: url('../../public/Bestanden/images/navBackground.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    
     padding: 10px 20px;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,8 +37,10 @@ img {
   
 .menu {
     list-style-type: none;
+    
     padding: 0;
     margin: 0;
+    
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -40,7 +48,9 @@ img {
   
 .menu li {
     color: white;
+    
     border-radius: 10px;
+    
     width: auto;
 }
 
@@ -55,6 +65,7 @@ img {
 
 .menu.active{
     width: 50%;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -68,7 +79,9 @@ img {
 
 .menu li a{
     color: black;
+    
     text-decoration: none;
+    
     font-family: 'arial';
     font-weight: 600;
     font-size: 16px;
@@ -76,8 +89,10 @@ img {
 
 .hamburger{
     border: none;
+    
     display: none;
     flex-direction: column;
+    
     cursor: pointer;
     position: unset;
 }
@@ -96,37 +111,48 @@ img {
 
 .bar{
     display: block;
+   
     width: 25px;
     height: 3px;
+   
     margin: 3px auto;
+   
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+   
     background-color: black;
 }
 
 main .hero {
     height: auto;
     width: 95%;
+    
     margin-bottom: 30px;
     margin: 10px;
+    
     background-image: url("../../public/Bestanden/images/bannerAboutUs.jpg");
     background-repeat: no-repeat;
+    
     display: flex;
     flex-direction: column;
 }
 
 .hero h2 {
     color: cornflowerblue;
+    
     margin-left: 20px;
     margin-top: 30px;
+    
     text-align: center;
 }
 
 .hero p {
     width: 300px;
     height: auto;
+    
     margin-left: 50px;
     margin-top: 20px;
+    
     text-align: center;
 }
 
@@ -134,11 +160,15 @@ main .hero {
     margin-top: 20px;
     margin-left: 100px;
     margin-bottom: 30px;
+    
     height: 40px;
     width: 220px;
+    
     border: 1px solid black;
     border-radius: 10px;
+    
     background-color: cornflowerblue;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -150,15 +180,20 @@ main .hero {
 
 a{
     text-decoration: none;
+    
     padding: 10px;
+    
     color: black;
+    
     font-weight: bold;
     font-size: 14px;
 }
 
 main {
     height: 100%;
+   
     margin: 10px;
+   
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -167,15 +202,19 @@ main {
 
 main h1 {
     color: cornflowerblue;
+   
     margin-top: 10px;
     margin-bottom: 30px;
+   
     text-align: center;
 }
 
 .form-group {
     margin: 20px;
     padding: 19px;
+    
     font-weight: bold;
+    
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -184,23 +223,30 @@ main h1 {
 .form-group input {
     width: 100px;
     height: 50px;
+    
     font-size: 20px;
+    
     margin: 10px;
 }
 
 button {
     height: 48px;
     width: 100px;
+    
     font-weight: bold;
+    
     background-color: yellow;
+    
     border: 1px solid black;
     border-radius: 10px;
 }
 
 section {
     width: auto;
+    
     margin-top: 30px;
     margin-bottom: 35px;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -208,19 +254,23 @@ section {
 
 section h1 {
     color: cornflowerblue;
+    
     font-weight: 900;
     font-size: 40px;
+    
     margin-top: 30px;
     margin-bottom: 20px;
 }
 
 section p {
     margin: 5px;
+    
     font-size: 20px;
 }
 
 textarea {
     resize: none;
+    
     height: 100px;
     width: 300px;
 }
@@ -239,6 +289,7 @@ textarea {
 
 .bijzonderheden {
     width: 400px;
+    
     text-align: center;
 }
 
@@ -255,15 +306,19 @@ textarea {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    
     max-width: 400px;
 }
 
 .cards {
     width: 300px;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
+    
     margin: 20px;
+    
     border: 1px solid black;
     border-radius: 10px;
 }
@@ -271,6 +326,7 @@ textarea {
 .cards img {
     margin-top: 0;
     margin-bottom: 5px;
+    
     height: 320px;
     width: 100%;
 }
@@ -292,6 +348,7 @@ textarea {
 
 .besteld {
     height: auto;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -309,12 +366,15 @@ textarea {
 .besteld h3 {
     margin-top: 10px;
     margin-left: 5px;
+    
     text-align: center;
 }
 
 .bestelling {
     font-size: 70px;
+    
     color: cornflowerblue;
+    
     margin-top: 30px;
 }
 
@@ -336,9 +396,12 @@ footer {
     background-image: url('../../public/Bestanden/images/footerImage.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+
     width: 100vw;
-    height: 200px;
+    height: 100px;
+    
     color: white;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -348,7 +411,9 @@ footer {
 
     body {
         font-family: Helvetica, sans-serif;
+        
         width: auto;
+        height: 100vh;
     }
     
     .line {
@@ -361,12 +426,15 @@ footer {
 
     .navbar{
         width: 96.9% !important;
+       
         background-image: url('../../public/Bestanden/images/navBackground.jpg');
         background-repeat: no-repeat;
         background-size: cover;
+       
         display: flex;
         justify-content: space-between;
         align-items: center;
+        
         height: 90px;
         width: auto;
     }
@@ -379,6 +447,7 @@ footer {
     .details{
         width: 80%;
         height: auto;
+       
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -388,12 +457,15 @@ footer {
     .details img{
         width: 100%;
         height: 400px;
+        
         border-radius: 10px;
+        
         object-fit: cover;
     }
 
     .details h2{
         font-size: 28px;
+        
         padding-top: 10px;
     }
 
@@ -405,46 +477,60 @@ footer {
     .details p a{
         font-size: 20px;
         font-weight: normal;
+        
         padding: 0px;
+        
         text-decoration: underline;
+        
         color: blue;
     }
     
     main .hero {
         height: auto;
         width: 100%;
+       
         margin-bottom: 30px;
         margin: 10px;
+       
         background-image: url("../../public/Bestanden/images/bannerAboutUs.jpg");
         background-repeat: no-repeat;
+       
         display: flex;
         flex-direction: column;
     }
     
     .hero h2 {
         color: cornflowerblue;
+        
         margin-left: 200px;
         margin-top: 30px;
+        
         text-align: left;
     }
     
     .hero p {
         width: 400px;
         height: auto;
+        
         margin-left: 50px;
         margin-top: 20px;
         
+        padding: 10px;
     }
     
     .hero .learnMore{
         margin-top: 20px;
         margin-left: 150px;
         margin-bottom: 30px;
+        
         height: 40px;
         width: 220px;
+        
         border: 1px solid black;
         border-radius: 10px;
+        
         background-color: cornflowerblue;
+        
         display: flex;
         justify-content: center;
         align-items: center;
@@ -457,20 +543,26 @@ footer {
     .navbar ul {
         display: flex;
         flex-direction: row;
+        
         list-style-type: none;
     }
     
     a{
         text-decoration: none;
+        
         padding: 10px;
+        
         color: black;
+        
         font-weight: bold;
         font-size: 18px;
     }
     
     main {
         height: 100%;
+        
         margin: 10px;
+        
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -479,15 +571,19 @@ footer {
     
     main h1 {
         color: cornflowerblue;
+        
         margin-top: 15px;
         margin-bottom: 30px;
+        
         text-align: center;
     }
     
     .form-group {
         margin: 20px;
         padding: 19px;
+        
         font-weight: bold;
+        
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -496,31 +592,41 @@ footer {
     .form-group input {
         width: 280px;
         height: 50px;
+        
         font-size: 20px;
+        
         margin: 10px;
     }
 
     .form-group select {
         width: 280px;
         height: 50px;
+        
         font-size: 20px;
+        
         margin: 10px;
     }
     
     button {
         height: 48px;
         width: 100px;
+        
         font-weight: bold;
+        
         background-color: yellow;
+        
         border: 1px solid black;
         border-radius: 10px;
+        
         cursor: pointer;
     }
     
     section {
         width: 100%;
+        
         margin-top: 30px;
         margin-bottom: 35px;
+        
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -528,20 +634,23 @@ footer {
     
     section h1 {
         color: cornflowerblue;
+        
         font-weight: 900;
         font-size: 40px;
+        
         margin-top: 30px;
         margin-bottom: 20px;
     }
     
     section p {
         margin: 5px;
+
         font-size: 20px;
-    
     }
     
     textarea {
         resize: none;
+        
         height: 100px;
         width: 300px;
     }
@@ -560,6 +669,7 @@ footer {
     
     .bijzonderheden {
         width: 400px;
+        
         text-align: center;
     }
     
@@ -571,8 +681,10 @@ footer {
         background-image: url('../../public/Bestanden/images/bannerComingSoon.jpg');
         background-repeat: no-repeat;
         background-size: cover;
+        
         height: 300px;
         width: 100%;
+        
         display: flex;
         align-items: center;
         justify-content: center;
@@ -581,7 +693,9 @@ footer {
     .bannerComingSoon .h1ComingSoon {
         color: white;
         background-color: red;
+        
         border: 10px solid white;
+        
         font-size: 100px;
         opacity:  0.6;
     }
@@ -589,15 +703,19 @@ footer {
     .cardSection {
         display: flex;
         flex-wrap: wrap;
+        
         max-width: 90%;
     }
     
     .cards {
         width: 300px;
+        
         display: flex;
         flex-direction: column;
         align-items: center;
+        
         margin: 20px;
+        
         border: 1px solid black;
         border-radius: 10px;
     }
@@ -605,8 +723,10 @@ footer {
     .cards img {
         margin-top: 0;
         margin-bottom: 5px;
+        
         height: 320px;
         width: 100%;
+        
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
     }
@@ -647,7 +767,9 @@ footer {
     
     .bestelling {
         font-size: 70px;
+        
         color: cornflowerblue;
+        
         margin-top: 30px;
     }
     
@@ -655,8 +777,15 @@ footer {
         background-image: url('../../public/Bestanden/images/footerImage.jpg');
         background-size: cover;
         background-repeat: no-repeat;
+        
         height: 100px;
+     
         color: white;
+
+        display: flex;
+        align-items: center;
+
+        bottom: 0;
     }
 }
 

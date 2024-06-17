@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\adminOverzicht;
+use App\Models\user;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Crypt;
 
 class AdminOverzichtController extends Controller
 {
@@ -12,7 +14,9 @@ class AdminOverzichtController extends Controller
      */
     public function index()
     {
-        //
+        $admins = User::all();
+
+        return view('adminOverzicht', ['admins' => $admins]);
     }
 
     /**

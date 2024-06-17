@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\AttractieOverzicht;
+use App\Models\Attracties;
 use Illuminate\Http\Request;
 
 class AttractieOverzichtController extends Controller
@@ -13,7 +14,7 @@ class AttractieOverzichtController extends Controller
     public function index()
     {
         $attracties = Attracties::all();
-        return view('attracties', ['attracties' => $attracties]);
+        return view('attractieOverzicht', ['attracties' => $attracties]);
     }
 
     /**

@@ -2,7 +2,7 @@
 @section('content')
     <main>
         <h1>Contacten</h1>
-        <p>Hier is een overzicht met alle contact verzoeken.</p>
+        <p>Hier is een overzicht met alle ticket bestelling.</p>
         <table>
         <tbody>
             <tr>

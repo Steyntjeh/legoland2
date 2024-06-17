@@ -12,7 +12,8 @@ use App\http\Controllers\AuthController;
 use App\Http\Controllers\BoekOverzichtController;
 use App\Http\Controllers\ContactOverzichtController;
 use App\Http\Controllers\AccomodatieOverzichtController;
-
+use App\Http\Controllers\AdminOverzichtController;
+use App\Http\Controllers\AttractieOverzichtController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +39,8 @@ Route::get('', function () {
 Route::get('/attracties', [AttractiesController::class, 'show']);
 
 Route::get('/attracties/{id}', [DetailsController::class, 'show'])->name('details');
+
+Route::get('/attractieOverzicht', [AttractieOverzichtController::class, 'index']);
 
 Route::get('/contact', function () {
     return view('Contact');
@@ -100,3 +103,5 @@ Route::get('/boekOverzicht', [BoekOverzichtController::class, 'index']);
 Route::get('/accomodatieOverzicht', [accomodatieOverzichtController::class, 'index']);
 
 Route::post('/accomodatieOverzicht', [AccomodatieOverzichtController::class, 'store']);
+
+Route::get('/adminOverzicht', [adminOverzichtController::class, 'index']);

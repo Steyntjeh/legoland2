@@ -20,7 +20,7 @@
                 </tr>
             @endforeach 
                 <tr>
-                    <th><button href="#">+ Add new</button></th>
+                    <th colspan="4"><button href="#">+ Add new</button></th>
                 </tr>
             </tbody>
         </table>

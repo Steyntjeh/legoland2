@@ -1,8 +1,8 @@
 @extends('layout')
 @section('content')
     <main>
-        <h1>Contacten</h1>
-        <p>Hier is een overzicht met alle contact verzoeken.</p>
+        <h1>Ticket overzicht</h1>
+        <p>Hier is een overzicht met alle ticketsoorten.</p>
         <table>
         <tbody>
             <tr>
@@ -11,16 +11,16 @@
                 <th>Delete</th>
                 <th>Edit</th>
             </tr>
-            @foreach($tickets as $tickett)
+            @foreach($tickets as $ticket)
                 <tr>
                     <td>{{$ticket['ticketPrijs']}}</td>
-                    <td>{{$itcket['ticketSoort']}}</td>
+                    <td>{{$ticket['soortTicket']}}</td>
                     <td><button>Edit</button></td>
                     <td><button>Delete</button></td>
                 </tr>
             @endforeach 
                 <tr>
-                    <th><button href="#">+ Add new</button></th>
+                    <th colspan="4"><button href="#">+ Add new</button></th>
                 </tr>
             </tbody>
         </table>

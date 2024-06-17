@@ -1,8 +1,8 @@
 @extends('layout')
 @section('content')
     <main>
-        <h1>Contacten</h1>
-        <p>Hier is een overzicht met alle contact verzoeken.</p>
+        <h1>Attractie overzicht</h1>
+        <p>Hier is een overzicht met alle attracties.</p>
         <table>
         <tbody>
             <tr>
@@ -28,7 +28,7 @@
                 </tr>
             @endforeach 
                 <tr>
-                    <th><button href="#">+ Add new</button></th>
+                    <th colspan="5"><button href="#">+ Add new</button></th>
                 </tr>
             </tbody>
         </table>

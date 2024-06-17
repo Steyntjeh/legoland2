@@ -24,8 +24,8 @@
         <li><a href="/login">Login</a></li>
     @endguest
     @auth
-        <li><a href="/attractieOverzicht">Attracties</a></li>
         <li><a href="/adminOverzicht">Admins</a></li>
+        <li><a href="/attractieOverzicht">Attracties</a>
         <li><a href="/contactOverzicht">Contacten</a></li>
         <li><a href="/boekOverzicht">Boekingen</a></li>
         <li><a href="/accomodatieOverzicht">Accomodaties</a></li>

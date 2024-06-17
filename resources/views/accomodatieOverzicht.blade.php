@@ -22,7 +22,7 @@
         </tr>
         @endforeach
         <tr>
-            <td><button href="#">+ Add new</button></td>
+            <th><button href="#">+ Add new</button></th>
         </tr>
       </tbody>
     </table>

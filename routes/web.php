@@ -14,6 +14,7 @@ use App\http\Controllers\AuthController;
 use App\Http\Controllers\BoekOverzichtController;
 use App\Http\Controllers\ContactOverzichtController;
 use App\Http\Controllers\AccomodatieOverzichtController;
+use App\Http\Controllers\AccomodatieFormController;
 use App\Http\Controllers\TicketOverzichtController;
 use App\Http\Controllers\TicketOrderOverzichtController;
 
@@ -109,6 +110,11 @@ Route::get('/contactOverzicht', [ContactOverzichtController::class, 'index']);
 
 Route::get('/boekOverzicht', [BoekOverzichtController::class, 'index']);
 
-Route::get('/accomodatieOverzicht', [accomodatieOverzichtController::class, 'index']);
+Route::get('/accomodatieOverzicht', [AccomodatieOverzichtController::class, 'index'])->name('accomodatieOverzicht');
+Route::get('/accomodatieForm', [AccomodatieOverzichtController::class, 'create'])->name('accomodatiesForm');
+Route::post('/accomodaties', [AccomodatieOverzichtController::class, 'store'])->name('accomodaties.store');
+Route::get('/accomodatieUpdate/{accomodatie}', [AccomodatieOverzichtController::class, 'edit'])->name('accomodatieUpdate');
+Route::put('/accomodaties/{accomodatie}', [AccomodatieOverzichtController::class, 'update'])->name('accomodaties.update');
+Route::delete('/accomodaties/{accomodatie}', [AccomodatieOverzichtController::class, 'destroy'])->name('accomodaties.destroy');
 
-Route::post('/accomodatieOverzicht', [AccomodatieOverzichtController::class, 'store']);
+

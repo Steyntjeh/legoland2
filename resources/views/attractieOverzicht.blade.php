@@ -23,12 +23,12 @@
                     <td>{{$attractie['lengte']}}</td>
                     <td>{{$attractie['image']}}</td>
                     <td>{{$attractie['minimaleLengte']}}</td>
-                    <td><button>Edit</button></td>
-                    <td><button>Delete</button></td>
+                    <td><a href="/attractieForm"><button>Edit</button></a></td>
+                    <td><a href="/attractieOverzicht"><button>Delete</button></a></td>
                 </tr>
             @endforeach 
                 <tr>
-                    <th colspan="7"><button href="#">+ Add new</button></th>
+                    <th colspan="7"><a href="/attractieForm"><button>+ Add new</button></a></th>
                 </tr>
             </tbody>
         </table>

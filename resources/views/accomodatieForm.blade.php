@@ -2,35 +2,38 @@
 @section('content')
     <main>
         <h1>Accomodaties</h1>
-        <p>Hier kan je nieuwe accomodaties toevoegen</p>
+        <p>@isset($accomodatie) Accommodatie Bewerken @else Nieuwe Accommodatie @endisset</p>
 
-        <form action="/accomodatieOverzicht" method="post">
+        <form action="@isset($accomodatie) {{ route('accomodaties.update', $accomodatie->id) }} @else {{ route('accomodaties.store') }} @endisset" method="post">
          @csrf
+         @isset($accomodatie)
+            @method('PUT')
+         @endisset
          <div class="form-group">
             <label for="type">Type*</label>
-            <input type="text" name="type" class="form-control" placeholder="Type...">
+            <input type="text" name="type" class="form-control" value="{{ old('type', $accomodatie['type'] ?? '') }}" placeholder="Type...">
          </div> 
          <div class="form-group email" >
             <label for="aantalPersonen">Aantal Personen*</label>
-            <input type="number" name="aantalPersonen" class="form-control" placeholder="Aantal Personen...">
+            <input type="number" name="aantalPersonen" class="form-control" value="{{ old('aantalPersonen', $accomodatie['aantalPersonen'] ?? '') }}" placeholder="Aantal Personen...">
          </div>
          <div class="form-group">
             <label for="kostenPerNacht">Kosten per nacht*</label>
-            <input type="number" name="kostenPerNacht" class="form-control" placeholder="Kosten per nacht...">
+            <input type="number" name="kostenPerNacht" class="form-control" value="{{ old('kostenPerNacht', $accomodatie['kostenPerNacht'] ?? '') }}" placeholder="Kosten per nacht...">
          </div>
          <div class="form-group">
             <label for="informatie">Informatie*</label>
-            <input type="text" name="informatie" class="form-control" placeholder="Informatie...">
+            <input type="text" name="informatie" class="form-control" value="{{ old('informatie', $accomodatie['informatie'] ?? '') }}" placeholder="Informatie...">
          </div>
          <div class="form-group">
             <label for="facilities">Faciliteiten*</label>
-            <input type="text" name="facilities" class="form-control" placeholder="Faciliteiten...">
+            <input type="text" name="facilities" class="form-control" value="{{ old('facilities', $accomodatie['facilities'] ?? '') }}" placeholder="Faciliteiten...">
          </div>
          <div class="form-group">
             <label for="imageUrl">Foto url*</label>
-            <input type="text" name="imageUrl" class="form-control" placeholder="Foto url...">
+            <input type="text" name="imageUrl" class="form-control" value="{{ old('imageUrl', $accomodatie['imageUrl'] ?? '') }}" placeholder="Foto url...">
          </div>
-         <button type="submit" class="btn btn-primary">Verzenden</button>
+         <button type="submit" class="btn btn-primary">@isset($accomodatie) Bijwerken @else Opslaan @endisset</button>
         </form>
 
        @if($errors -> any())

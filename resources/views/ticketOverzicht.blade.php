@@ -15,8 +15,8 @@
                 <tr>
                     <td>{{$ticket['ticketPrijs']}}</td>
                     <td>{{$ticket['soortTicket']}}</td>
-                    <td><button>Edit</button></td>
-                    <td><button>Delete</button></td>
+                    <td><a href="/ticketsForm"><button>Edit</button></a></td>
+                    <td><a href="/ticketsOverzicht"><button>Delete</button></a></td>
                 </tr>
             @endforeach 
                 <tr>

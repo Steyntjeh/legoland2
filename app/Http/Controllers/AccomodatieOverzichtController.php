@@ -14,7 +14,7 @@ class AccomodatieOverzichtController extends Controller
     public function index()
     {
         $accomodaties = Accomodaties::all();
-        return view('accomodatieOverzicht', ['accomodaties' => $accomodaties]);
+        return view('accomodatieOverzicht', compact('accomodaties'));
     }
 
     /**
@@ -22,7 +22,7 @@ class AccomodatieOverzichtController extends Controller
      */
     public function create()
     {
-        //
+        return view('accomodatieForm');
     }
 
     /**
@@ -50,7 +50,7 @@ class AccomodatieOverzichtController extends Controller
 
         $accomodaties->save();
 
-        return redirect('/accomodatieOverzicht');
+        return redirect()->route('accomodatieOverzicht');
     }
 
     /**
@@ -64,24 +64,48 @@ class AccomodatieOverzichtController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(accomodatiesOverzicht $accomodatiesOverzicht)
+    public function edit($id)
     {
-        //
+        $accomodatie = Accomodaties::find($id);
+        return view('accomodatieUpdate', compact('accomodatie'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, accomodatiesOverzicht $accomodatiesOverzicht)
+    public function update(Request $request, $id)
     {
-        //
+        $validatedData = $request->validate([
+            'type' => 'required|string',
+            'aantalPersonen' => 'required',
+            'kostenPerNacht' => 'required',
+            'informatie' => 'required|string',
+            'facilities' => 'required|string',
+            'imageUrl' => 'required|string'
+        ]);
+    
+        $accomodatie = Accomodaties::findOrFail($id);
+    
+        $accomodatie->type = $validatedData['type'];
+        $accomodatie->aantalPersonen = $validatedData['aantalPersonen'];
+        $accomodatie->kostenPerNacht = $validatedData['kostenPerNacht'];
+        $accomodatie->informatie = $validatedData['informatie'];
+        $accomodatie->facilities = $validatedData['facilities'];
+        $accomodatie->image = $validatedData['imageUrl'];
+    
+        $accomodatie->save();
+    
+        return redirect()->route('accomodatieOverzicht')->with('success', 'Accommodatie bijgewerkt');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(accomodatiesOverzicht $accomodatiesOverzicht)
+    public function destroy($id)
     {
-        //
+        $accomodatie = Accomodaties::find($id);
+        $accomodatie->delete();
+
+        return redirect()->route('accomodatieOverzicht')->with('success', 'Accommodatie verwijderd');
     }
 }

@@ -14,6 +14,8 @@
                 <th>Aankomst</th>
                 <th>Vertrek</th>
                 <th>Aantal personen</th>
+                <th>Edit</th>
+                <th>Delete</th>
             </tr>
             @foreach($boekingen as $boeking)
                 <tr>
@@ -25,6 +27,8 @@
                     <td>{{$boeking['aankomst']}}</td>
                     <td>{{$boeking['vertrek']}}</td>
                     <td>{{$boeking['aantalPersonen']}}</td>
+                    <td><a href="/boekForm"><button>Edit</button></a></td>
+                    <td><a href="/boekOverzicht"><button>Delete</button></a></td>
                 </tr>
             @endforeach
         </table>

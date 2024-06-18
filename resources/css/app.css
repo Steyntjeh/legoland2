@@ -240,12 +240,6 @@ button {
     border: 1px solid black;
     border-radius: 10px;
 }
-.tableAdmin tbody tr:nth-child(4){
-   width: 100%;
-   display: flex;
-   justify-content: center;
-}
-
 
 section {
     width: auto;

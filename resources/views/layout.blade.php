@@ -9,7 +9,6 @@
     @vite(['resources/js/app.js', 'resources/js/script.js', 'resources/css/app.css'])
 </head>
 <body>
-
        <div class="navbar">
 
        <a href="/"><img src="../Bestanden/LEGOLAND_PARKS_LOGO.svg" alt="Legoland logo"></a>

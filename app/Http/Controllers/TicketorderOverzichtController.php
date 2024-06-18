@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\ticketorderOverzicht;
+use App\Models\TicketOrder;
 use Illuminate\Http\Request;
 
 class TicketorderOverzichtController extends Controller
@@ -12,7 +13,9 @@ class TicketorderOverzichtController extends Controller
      */
     public function index()
     {
-        //
+        $ticketOrders = TicketOrder::all();
+
+        return view('ticketOrderOverzicht', ['ticketOrders' => $ticketOrders]);
     }
 
     /**

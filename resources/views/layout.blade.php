@@ -28,6 +28,8 @@
         <li><a href="/attractieOverzicht">Attracties</a>
         <li><a href="/contactOverzicht">Contacten</a></li>
         <li><a href="/boekOverzicht">Boekingen</a></li>
+        <li><a href="/ticketOverzicht">Tickets</a></li>
+        <li><a href="/ticketOrderOverzicht">Ticketbestellingen</a></li>
         <li><a href="/accomodatieOverzicht">Accomodaties</a></li>
         <li><a href="/dashboard">Dashboard</a></li>
         <li><a href="/register">Register</a></li>

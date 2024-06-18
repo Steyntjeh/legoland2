@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\AdminOverzichtController;
 use App\Http\Controllers\AttractiesController;
+use App\Http\Controllers\AttractieOverzichtController;
 use App\Http\Controllers\DetailsController;
 use App\Http\Controllers\TicketsController;
 use App\http\Controllers\AccomodatiesController;
@@ -12,6 +14,8 @@ use App\http\Controllers\AuthController;
 use App\Http\Controllers\BoekOverzichtController;
 use App\Http\Controllers\ContactOverzichtController;
 use App\Http\Controllers\AccomodatieOverzichtController;
+use App\Http\Controllers\TicketOverzichtController;
+use App\Http\Controllers\TicketOrderOverzichtController;
 
 
 /*
@@ -59,6 +63,10 @@ Route::get('/tickets', [TicketsController::class, 'index']);
 
 Route::post('/tickets/insert', [TicketsController::class, 'store']);
 
+Route::get('/ticketOverzicht', [TicketOverzichtController::class, 'index']);
+
+Route::get('/ticketOrderOverzicht', [TicketOrderOverzichtController::class, 'index']);
+
 Route::get('/besteld', function () {
     return view('Bestelling');
 });
@@ -94,6 +102,8 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('register');
 
 Route::post('/register', [AuthController::class, 'register']);
+
+Route::get('/adminOverzicht', [AdminOverzichtController::class, 'index']);
 
 Route::get('/contactOverzicht', [ContactOverzichtController::class, 'index']);
 

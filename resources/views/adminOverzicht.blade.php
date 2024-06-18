@@ -3,7 +3,7 @@
 <main>
 <h1>Admins</h1>
         <p>Hier is een overzicht met alle admins.</p>
-        <table>
+        <table class="tableAdmin">
         <tbody>
             <tr>
                 <th>Naam</th>
@@ -15,6 +15,9 @@
                     <td>{{$admin['email']}}</td>
                 </tr>
             @endforeach 
+            <tr>
+                <th colspan="2"><a href="/register"><button>+ Add new</button></a></th>
+            </tr>
             </tbody>
         </table>
 </main>

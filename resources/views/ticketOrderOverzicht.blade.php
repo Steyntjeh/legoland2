@@ -2,7 +2,7 @@
 @section('content')
     <main>
         <h1>Contacten</h1>
-        <p>Hier is een overzicht met alle ticket bestelling.</p>
+        <p>Hier is een overzicht met alle ticket bestellingen.</p>
         <table>
         <tbody>
             <tr>
@@ -13,14 +13,14 @@
                 <th>Bericht</th>
                 <th>Order nummer</th>
             </tr>
-            @foreach($contacten as $contact)
+            @foreach($ticketOrders as $ticketOrder)
                 <tr>
-                    <td>{{$contact['voornaam']}}</td>
-                    <td>{{$contact['achternaam']}}</td>
-                    <td>{{$contact['Email']}}</td>
-                    <td>{{$contact['telefoonNummer']}}</td>
-                    <td>{{$contact['bericht']}}</td>
-                    <td>{{$contact['orderNummer']}}</td>
+                    <td>{{$ticketOrder['voornaam']}}</td>
+                    <td>{{$ticketOrder['achternaam']}}</td>
+                    <td>{{$ticketOrder['Email']}}</td>
+                    <td>{{$ticketOrder['telefoonNummer']}}</td>
+                    <td>{{$ticketOrder['bericht']}}</td>
+                    <td>{{$ticketOrder['orderNummer']}}</td>
                 </tr>
             @endforeach 
             </tbody>

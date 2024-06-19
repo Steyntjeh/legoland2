@@ -12,14 +12,17 @@
          </div> 
          <div class="form-group">
             <label for="soortTicket">Soort ticket*</label>
-            <input type="text" name="soortTicket" class="form-control" placeholder="Soort ticket...">
+            <input type="text" name="soortTicket" class="form-control" placeholder="Soort ticket
+            
+            ...">
          </div>
          <button type="submit" class="btn btn-primary">Verzenden</button>
         </form>
 
        @if($errors -> any())
        <div class="alert alert-danger">
-        <ul>
+
+       <ul>
             @foreach ($errors -> all() as $error)
             <li>{{ $error }}</li>
             @endforeach

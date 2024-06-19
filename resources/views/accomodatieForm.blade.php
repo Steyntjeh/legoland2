@@ -31,7 +31,7 @@
          </div>
          <div class="form-group">
             <label for="imageUrl">Foto url*</label>
-            <input type="text" name="imageUrl" class="form-control" value="{{ old('imageUrl', $accomodatie['imageUrl'] ?? '') }}" placeholder="Foto url...">
+            <input type="text" name="imageUrl" class="form-control" value="{{ old('image', $accomodatie['image'] ?? '') }}" placeholder="Foto url...">
          </div>
          <button type="submit" class="btn btn-primary">@isset($accomodatie) Bijwerken @else Opslaan @endisset</button>
         </form>

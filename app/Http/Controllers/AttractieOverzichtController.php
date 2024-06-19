@@ -14,7 +14,7 @@ class AttractieOverzichtController extends Controller
     public function index()
     {
         $attracties = Attracties::all();
-        return view('attractieOverzicht', ['attracties' => $attracties]);
+        return view('attractieOverzicht', compact('attracties'));
     }
 
     /**
@@ -22,7 +22,7 @@ class AttractieOverzichtController extends Controller
      */
     public function create()
     {
-        //
+        return view('attractieForm');
     }
 
     /**
@@ -30,7 +30,27 @@ class AttractieOverzichtController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'naamAttractie' => 'required|string',
+            'tijdsDuur' => 'required',
+            'informatie' => 'required|string',
+            'lengte' => 'required',
+            'imageUrl' => 'required|string',
+            'minimaleLengte' => 'required'
+        ]);
+
+        $attracties = new Attracties();
+
+        $attracties -> naamAttractie = $validatedData['naamAttractie'];
+        $attracties -> tijdsDuur = $validatedData['tijdsDuur'];
+        $attracties -> informatie = $validatedData['informatie'];
+        $attracties -> lengte = $validatedData['lengte'];
+        $attracties -> image = $validatedData['imageUrl'];
+        $attracties -> minimaleLengte = $validatedData['minimaleLengte'];
+
+        $attracties->save();
+
+        return redirect()->route('attractieOverzicht');
     }
 
     /**
@@ -44,24 +64,48 @@ class AttractieOverzichtController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(AttractieOverzicht $attractieOverzicht)
+    public function edit($id)
     {
-        //
+        $attractie = Attracties::find($id);
+        return view('attractieUpdate', compact('attractie'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, AttractieOverzicht $attractieOverzicht)
+    public function update(Request $request, $id)
     {
-        //
+        $validatedData = $request->validate([
+            'naamAttractie' => 'required|string',
+            'tijdsDuur' => 'required',
+            'informatie' => 'required|string',
+            'lengte' => 'required',
+            'imageUrl' => 'required|string',
+            'minimaleLengte' => 'required'
+        ]);
+
+        $attractie = Attracties::findOrFail($id);
+
+        $attracties -> naamAttractie = $validatedData['naamAttractie'];
+        $attracties -> tijdsDuur = $validatedData['tijdsDuur'];
+        $attracties -> informatie = $validatedData['informatie'];
+        $attracties -> lengte = $validatedData['lengte'];
+        $attracties -> image = $validatedData['imageUrl'];
+        $attracties -> minimaleLengte = $validatedData['minimaleLengte'];
+
+        $attracties->save();
+
+        return redirect()->route('attractieOverzicht')->with('success', 'Attractie bijgewerkt');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(AttractieOverzicht $attractieOverzicht)
+    public function destroy($id)
     {
-        //
+        $attractie = Attracties::find($id);
+        $attractie->delete();
+
+        return redirect()->route('attractieOverzicht')->with('success', 'Attractie verwijderd');
     }
 }

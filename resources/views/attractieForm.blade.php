@@ -1,36 +1,39 @@
 @extends('layout')
 @section('content')
     <main>
-        <h1>Attracties</h1>
-        <p>Hier kan je nieuwe attracties toevoegen</p>
+        <h1>Accomodaties</h1>
+        <p>@isset($attractie) Attractie Bewerken @else Nieuwe Attractie @endisset</p>
 
-        <form action="/attractieOverzicht" method="post">
+        <form action="@isset($attractie) {{ route('attracties.update', $attractie->id) }} @else {{ route('attracties.store') }} @endisset" method="post">
          @csrf
+         @isset($attractie)
+            @method('PUT')
+         @endisset
          <div class="form-group">
-            <label for="naam">naam*</label>
-            <input type="text" name="naamAttractie" class="form-control" placeholder="Naam attractie...">
+            <label for="naamAttractie">Naam Attractie*</label>
+            <input type="text" name="naamAttractie" class="form-control" value="{{ old('naamAttractie', $accomodatie['naamAttractie'] ?? '') }}" placeholder="Type...">
          </div> 
-         <div class="form-group">
-            <label for="tijdsDuur">Tijdsduur*</label>
-            <input type="text" name="tijdsDuur" class="form-control" placeholder="Tijdsduur...">
+         <div class="form-group email" >
+            <label for="tijdsDuur">Duur*</label>
+            <input type="text" name="tijdsDuur" class="form-control" value="{{ old('tijdsDuur', $accomodatie['tijdsDuur'] ?? '') }}" placeholder="Aantal Personen...">
          </div>
          <div class="form-group">
             <label for="informatie">Informatie*</label>
-            <input type="text" name="informatie" class="form-control" placeholder="Informatie...">
+            <input type="text" name="informatie" class="form-control" value="{{ old('informatie', $accomodatie['informatie'] ?? '') }}" placeholder="Kosten per nacht...">
          </div>
          <div class="form-group">
             <label for="lengte">Lengte*</label>
-            <input type="text" name="lengte" class="form-control" placeholder="Lengte...">
+            <input type="text" name="lengte" class="form-control" value="{{ old('lengte', $accomodatie['lengte'] ?? '') }}" placeholder="Informatie...">
          </div>
          <div class="form-group">
-            <label for="image">Image*</label>
-            <input type="text" name="image" class="form-control" placeholder="Image...">
+            <label for="imageUrl">Foto url*</label>
+            <input type="text" name="imageUrl" class="form-control" value="{{ old('image', $accomodatie['image'] ?? '') }}" placeholder="Foto url...">
          </div>
          <div class="form-group">
-            <label for="minimaleLengte">Minimale lengte*</label>
-            <input type="number" name="minimaleLengte" class="form-control" placeholder="Minimale lengte...">
+            <label for="minimaleLengte">Minimale Lengte*</label>
+            <input type="text" name="minimaleLengte" class="form-control" value="{{ old('minimaleLengte', $accomodatie['minimaleLengte'] ?? '') }}" placeholder="Faciliteiten...">
          </div>
-         <button type="submit" class="btn btn-primary">Verzenden</button>
+         <button type="submit" class="btn btn-primary">@isset($accomodatie) Bijwerken @else Opslaan @endisset</button>
         </form>
 
        @if($errors -> any())

@@ -25,9 +25,6 @@
                     <td><a href="/contactOverzicht"><button>Delete</button></a></td>
                 </tr>
             @endforeach
-            <tr>
-                <th colspan="7"><a href="/contactForm"><button>+ add new</button></a></th>
-            </tr>
             </tbody>
         </table>
 @endsection    

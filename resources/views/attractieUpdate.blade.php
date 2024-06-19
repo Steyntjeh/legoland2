@@ -1,10 +1,10 @@
 @extends('layout')
 @section('content')
     <main>
-        <h1>Accomodaties</h1>
-        <p>Hier kan je een Accommodatie Bewerken</p>
+        <h1>Attracties</h1>
+        <p>Hier kan je een Attractie Bewerken</p>
 
-        <form action="{{ route('accomodaties.update', $accomodatie['id']) }}" method="post">
+        <form action="{{ route('attracties.update', $attractie['id']) }}" method="post">
          @csrf
          @method('PUT')
          <div class="form-group">

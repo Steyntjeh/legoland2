@@ -8,28 +8,28 @@
          @csrf
          @method('PUT')
          <div class="form-group">
-            <label for="type">Type*</label>
-            <input type="text" name="type" class="form-control" value="{{ $accomodatie['type'] }}" placeholder="Type...">
+            <label for="naamAttractie">Naam Attractie*</label>
+            <input type="text" name="naamAttractie" class="form-control" value="{{ $attractie['naamAttractie'] }}" placeholder="Naam Attractie...">
          </div> 
          <div class="form-group email" >
-            <label for="aantalPersonen">Aantal Personen*</label>
-            <input type="number" name="aantalPersonen" class="form-control" value="{{ $accomodatie['aantalPersonen'] }}" placeholder="Aantal Personen...">
-         </div>
-         <div class="form-group">
-            <label for="kostenPerNacht">Kosten per nacht*</label>
-            <input type="number" name="kostenPerNacht" class="form-control" value="{{ $accomodatie['kostenPerNacht'] }}" placeholder="Kosten per nacht...">
+            <label for="tijdsDuur">Duur*</label>
+            <input type="text" name="tijdsDuur" class="form-control" value="{{ $attractie['tijdsDuur'] }}" placeholder="Duur...">
          </div>
          <div class="form-group">
             <label for="informatie">Informatie*</label>
-            <input type="text" name="informatie" class="form-control" value="{{ $accomodatie['informatie'] }}" placeholder="Informatie...">
+            <input type="text" name="informatie" class="form-control" value="{{ $attractie['informatie'] }}" placeholder="Informatie...">
          </div>
          <div class="form-group">
-            <label for="facilities">Faciliteiten*</label>
-            <input type="text" name="facilities" class="form-control" value="{{ $accomodatie['facilities'] }}" placeholder="Faciliteiten...">
+            <label for="lengte">Lengte*</label>
+            <input type="text" name="lengte" class="form-control" value="{{ $attractie['lengte'] }}" placeholder="Lengte...">
          </div>
          <div class="form-group">
             <label for="imageUrl">Foto url*</label>
-            <input type="text" name="imageUrl" class="form-control" value="{{ $accomodatie['imageUrl'] }}" placeholder="Foto url...">
+            <input type="text" name="imageUrl" class="form-control" value="{{ $attractie['image'] }}" placeholder="Foto url...">
+         </div>
+         <div class="form-group">
+            <label for="minimaleLengte">Minimale Lengte*</label>
+            <input type="text" name="minimaleLengte" class="form-control" value="{{ $attractie['minimaleLengte'] }}" placeholder="Minimale Lengte...">
          </div>
          <button type="submit" class="btn btn-primary">Bijwerken</button>
         </form>

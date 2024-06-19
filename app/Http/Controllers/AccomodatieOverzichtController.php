@@ -50,7 +50,7 @@ class AccomodatieOverzichtController extends Controller
 
         $accomodaties->save();
 
-        return redirect()->route('accomodatieOverzicht');
+        return redirect()->route('accomodatieOverzicht')->with('success', 'Accommodatie toegevoegd');
     }
 
     /**

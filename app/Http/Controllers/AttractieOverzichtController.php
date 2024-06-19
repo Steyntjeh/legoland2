@@ -50,7 +50,7 @@ class AttractieOverzichtController extends Controller
 
         $attracties->save();
 
-        return redirect()->route('attractieOverzicht');
+        return redirect()->route('attractieOverzicht')->with('success', 'Attractie toegevoegd');
     }
 
     /**
@@ -84,7 +84,7 @@ class AttractieOverzichtController extends Controller
             'minimaleLengte' => 'required'
         ]);
 
-        $attractie = Attracties::findOrFail($id);
+        $attracties = Attracties::findOrFail($id);
 
         $attracties -> naamAttractie = $validatedData['naamAttractie'];
         $attracties -> tijdsDuur = $validatedData['tijdsDuur'];

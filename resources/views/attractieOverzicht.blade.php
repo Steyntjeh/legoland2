@@ -23,12 +23,18 @@
                     <td>{{$attractie['lengte']}}</td>
                     <td>{{$attractie['image']}}</td>
                     <td>{{$attractie['minimaleLengte']}}</td>
-                    <td><a href="/attractieForm"><button>Edit</button></a></td>
-                    <td><a href="/attractieOverzicht"><button>Delete</button></a></td>
+                    <td><a href="{{ route('attractieUpdate', $attractie['id']) }}"><button>Edit</button></a></td>
+                    <td>
+                      <form action="{{ route('attracties.destroy', $attractie['id']) }}" method="POST" style="display:inline;">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit">Delete</button>
+                      </form>
+                    </td>
                 </tr>
             @endforeach 
                 <tr>
-                    <th colspan="7"><a href="/attractieForm"><button>+ Add new</button></a></th>
+                    <th colspan="7"><a href="{{ route('attractieForm') }}"><button>+ Add new</button></a></th>
                 </tr>
             </tbody>
         </table>

@@ -4,7 +4,7 @@
         <h1>Accomodaties</h1>
         <p>@isset($accomodatie) Accommodatie Bewerken @else Nieuwe Accommodatie @endisset</p>
 
-        <form action="@isset($accomodatie) {{ route('accomodaties.update', $accomodatie->id) }} @else {{ route('accomodaties.store') }} @endisset" method="post">
+        <form action="@isset($accomodatie) {{ route('accomodaties.update', $accomodatie['id']) }} @else {{ route('accomodaties.store') }} @endisset" method="post">
          @csrf
          @isset($accomodatie)
             @method('PUT')

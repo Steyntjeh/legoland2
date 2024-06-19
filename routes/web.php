@@ -44,8 +44,6 @@ Route::get('/attracties', [AttractiesController::class, 'show']);
 
 Route::get('/attracties/{id}', [DetailsController::class, 'show'])->name('details');
 
-Route::get('/attractieOverzicht', [AttractieOverzichtController::class, 'index']);
-
 Route::get('/contact', function () {
     return view('Contact');
 });
@@ -111,10 +109,15 @@ Route::get('/contactOverzicht', [ContactOverzichtController::class, 'index']);
 Route::get('/boekOverzicht', [BoekOverzichtController::class, 'index']);
 
 Route::get('/accomodatieOverzicht', [AccomodatieOverzichtController::class, 'index'])->name('accomodatieOverzicht');
-Route::get('/accomodatieForm', [AccomodatieOverzichtController::class, 'create'])->name('accomodatiesForm');
+Route::get('/accomodatieForm', [AccomodatieOverzichtController::class, 'create'])->name('accomodatieForm');
 Route::post('/accomodaties', [AccomodatieOverzichtController::class, 'store'])->name('accomodaties.store');
 Route::get('/accomodatieUpdate/{accomodatie}', [AccomodatieOverzichtController::class, 'edit'])->name('accomodatieUpdate');
 Route::put('/accomodaties/{accomodatie}', [AccomodatieOverzichtController::class, 'update'])->name('accomodaties.update');
 Route::delete('/accomodaties/{accomodatie}', [AccomodatieOverzichtController::class, 'destroy'])->name('accomodaties.destroy');
 
-
+Route::get('/attractieOverzicht', [AttractieOverzichtController::class, 'index'])->name('attractieOverzicht');
+Route::get('/attractieForm', [AttractieOverzichtController::class, 'create'])->name('attractieForm');
+Route::post('/attracties', [AttractieOverzichtController::class, 'store'])->name('attracties.store');
+Route::get('/attractieUpdate/{attractie}', [AttractieOverzichtController::class, 'edit'])->name('attractieUpdate');
+Route::put('/attracties/{attractie}', [AttractieOverzichtController::class, 'update'])->name('attracties.update');
+Route::delete('/attracties/{attractie}', [AttractieOverzichtController::class, 'destroy'])->name('attracties.destroy');

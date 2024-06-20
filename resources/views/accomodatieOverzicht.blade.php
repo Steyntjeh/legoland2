@@ -39,7 +39,7 @@
         </tr>
         @endforeach
         <tr>
-            <th colspan="7"><a href="{{ route('accomodatiesForm') }}"><button>+ Add new</button></a></th>
+            <th colspan="7"><a href="{{ route('accomodatieForm') }}"><button>+ Add new</button></a></th>
         </tr>
       </tbody>
     </table>

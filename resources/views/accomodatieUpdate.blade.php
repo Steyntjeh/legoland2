@@ -29,7 +29,7 @@
          </div>
          <div class="form-group">
             <label for="imageUrl">Foto url*</label>
-            <input type="text" name="imageUrl" class="form-control" value="{{ $accomodatie['imageUrl'] }}" placeholder="Foto url...">
+            <input type="text" name="imageUrl" class="form-control" value="{{ $accomodatie['image'] }}" placeholder="Foto url...">
          </div>
          <button type="submit" class="btn btn-primary">Bijwerken</button>
         </form>

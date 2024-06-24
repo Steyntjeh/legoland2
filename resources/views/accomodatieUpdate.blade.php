@@ -21,11 +21,11 @@
          </div>
          <div class="form-group">
             <label for="informatie">Informatie*</label>
-            <input type="text" name="informatie" class="form-control" value="{{ $accomodatie['informatie'] }}" placeholder="Informatie...">
+            <textarea type="text" name="informatie" class="form-control" value="{{ $accomodatie['informatie'] }}" placeholder="Informatie..."></textarea>
          </div>
          <div class="form-group">
             <label for="facilities">Faciliteiten*</label>
-            <input type="text" name="facilities" class="form-control" value="{{ $accomodatie['facilities'] }}" placeholder="Faciliteiten...">
+            <textarea type="text" name="facilities" class="form-control" value="{{ $accomodatie['facilities'] }}" placeholder="Faciliteiten..."></textarea>
          </div>
          <div class="form-group">
             <label for="imageUrl">Foto url*</label>

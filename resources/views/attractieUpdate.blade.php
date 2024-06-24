@@ -17,7 +17,7 @@
          </div>
          <div class="form-group">
             <label for="informatie">Informatie*</label>
-            <input type="text" name="informatie" class="form-control" value="{{ $attractie['informatie'] }}" placeholder="Informatie...">
+            <textarea type="text" name="informatie" class="form-control" value="{{ $attractie['informatie'] }}" placeholder="Informatie..."></textarea>
          </div>
          <div class="form-group">
             <label for="lengte">Lengte*</label>

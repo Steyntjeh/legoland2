@@ -18,13 +18,12 @@
             </tr>
             @foreach($ticketOrders as $ticketOrder)
                 <tr>
-                    <td>{{$ticketOrder['orderNummer']}}</td>
-                    <td>{{$ticketOrder['ingeplandeDatum']}}</td>
+                    <td>{{$ticketOrder['id']}}</td>
                     <td>{{$ticketOrder['voornaam']}}</td>
                     <td>{{$ticketOrder['achternaam']}}</td>
-                    <td>{{$ticketOrder['Email']}}</td>
-                    <td>{{$ticketOrder['telefoonNummer']}}</td>
-                    <td>{{$ticketOrder['bericht']}}</td>
+                    <td>{{$ticketOrder['email']}}</td>
+                    <td>{{$ticketOrder['ticket_id']}}</td>
+                    <td>{{$ticketOrder['quantity']}}</td>
                     <td>
                         <a href="{{ route('tickeOrderUpdate', $ticketOrder['id']) }}">
                             <button>
@@ -33,7 +32,7 @@
                         </a>
                     </td>
                     <td>
-                      <form action="{{ route('ticketOrders.destroy', $ticketOrder['id']) }}" method="POST" style="display:inline;">
+                      <form action="{{ route('ticketorders.destroy', $ticketOrder['id']) }}" method="POST" style="display:inline;">
                         @csrf
                         @method('DELETE')
                         <button type="submit">

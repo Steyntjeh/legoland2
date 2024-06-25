@@ -21,7 +21,7 @@
             <label for="kamertype">Kamertype*</label>
                 <select name="kamertype" id="kamertype" class="form-control">
                     <option value="">--Please choose an option--</option>
-                    
+                    <!-- alle soorten accomodaties uit de database halen -->
                     @foreach ($accomodatie as $accomodatie)
                     <option value="{{$accomodatie['type']}}" >{{$accomodatie['type']}}</option>
                     @endforeach
@@ -43,7 +43,7 @@
         </div>
         <button type="submit" class="btn btn-primary">Boeken</button>
     </form>
-
+    <!-- controleren of er geen errors zijn, zo ja laat zien wat -->
     @if($errors -> any())
     <div class="alert alert-danger">
         <ul>

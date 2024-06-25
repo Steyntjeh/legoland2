@@ -15,6 +15,8 @@
                 <th>Edit</th>
                 <th>Delete</th>
             </tr>
+
+            <!-- alle attracties ophalen, en de edit knop -->
             @foreach($attracties as $attractie)
                 <tr>
                     <td>{{$attractie['naamAttractie']}}</td>
@@ -31,6 +33,7 @@
                         </a>
                     </td>
                     <td>
+                        <!-- een form aanmaken om een row te kunnen verwijderen uit de table en database -->
                       <form action="{{ route('attracties.destroy', $attractie['id']) }}" method="POST" style="display:inline;">
                         @csrf
                         @method('DELETE')
@@ -42,6 +45,7 @@
                 </tr>
             @endforeach 
                 <tr>
+                    <!-- een knop om een nieuwe toevoegen  -->
                     <th colspan="7"><a href="{{ route('attractieForm') }}"><button>+ Add new</button></a></th>
                 </tr>
             </tbody>

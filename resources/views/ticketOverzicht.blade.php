@@ -15,8 +15,22 @@
                 <tr>
                     <td>{{$ticket['ticketPrijs']}}</td>
                     <td>{{$ticket['soortTicket']}}</td>
-                    <td><a href="/ticketsForm"><button>Edit</button></a></td>
-                    <td><a href="/ticketsOverzicht"><button>Delete</button></a></td>
+                    <td>
+                        <a href="{{ route('attractieUpdate', $attractie['id']) }}">
+                            <button>
+                            <span class="material-icons">edit</span>
+                            </button>
+                        </a>
+                    </td>
+                    <td>
+                      <form action="{{ route('attracties.destroy', $attractie['id']) }}" method="POST" style="display:inline;">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit">
+                            <span class="material-icons">delete</span>
+                        </button>
+                      </form>
+                    </td>
                 </tr>
             @endforeach 
                 <tr>

@@ -15,8 +15,22 @@
                 <tr>
                     <td>{{$admin['name']}}</td>
                     <td>{{$admin['email']}}</td>
-                    <td><a href="/register"><button>Edit</button></a></td>
-                    <td><a href="/adminOverzicht"><button>Delete</button></a></td>
+                    <td>
+                        <a href="{{ route('attractieUpdate', $attractie['id']) }}">
+                            <button>
+                            <span class="material-icons">edit</span>
+                            </button>
+                        </a>
+                    </td>
+                    <td>
+                      <form action="{{ route('attracties.destroy', $attractie['id']) }}" method="POST" style="display:inline;">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit">
+                            <span class="material-icons">delete</span>
+                        </button>
+                      </form>
+                    </td>
                 </tr>
             @endforeach 
             <tr>

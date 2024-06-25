@@ -28,12 +28,20 @@
             <td>{{$accomodatie['informatie']}}</td>
             <td>{{$accomodatie['facilities']}}</td>
             <td>{{$accomodatie['image']}}</td>
-            <td><a href="{{ route('accomodatieUpdate', $accomodatie['id']) }}"><button>Edit</button></a></td>
+            <td>
+                <a href="{{ route('accomodatieUpdate', $accomodatie['id']) }}">
+                    <button>
+                        <span class="material-icons">edit</span>
+                    </button>
+                </a>
+            </td>
             <td>
               <form action="{{ route('accomodaties.destroy', $accomodatie['id']) }}" method="POST" style="display:inline;">
                   @csrf
                   @method('DELETE')
-                  <button type="submit">Delete</button>
+                  <button type="submit">
+                    <span class="material-icons">delete</span>
+                  </button>
               </form>
             </td>
         </tr>

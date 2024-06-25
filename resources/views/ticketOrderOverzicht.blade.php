@@ -18,17 +18,30 @@
             </tr>
             @foreach($ticketOrders as $ticketOrder)
                 <tr>
-                    <td>{{$ticketOrder['orderNummer']}}</td>
-                    <td>{{$ticketOrder['ingeplandeDatum']}}</td>
+                    <td>{{$ticketOrder['id']}}</td>
                     <td>{{$ticketOrder['voornaam']}}</td>
                     <td>{{$ticketOrder['achternaam']}}</td>
-                    <td>{{$ticketOrder['Email']}}</td>
-                    <td>{{$ticketOrder['telefoonNummer']}}</td>
-                    <td>{{$ticketOrder['bericht']}}</td>
-                    <td><a href="/ticketOrderForm"><button>Edit</button></a></td>
-                    <td><a href="/ticketOrderOverzicht"><button>Delete</button></a></td>
+                    <td>{{$ticketOrder['email']}}</td>
+                    <td>{{$ticketOrder['ticket_id']}}</td>
+                    <td>{{$ticketOrder['quantity']}}</td>
+                    <td>
+                        <a href="{{ route('tickeOrderUpdate', $ticketOrder['id']) }}">
+                            <button>
+                            <span class="material-icons">edit</span>
+                            </button>
+                        </a>
+                    </td>
+                    <td>
+                      <form action="{{ route('ticketorders.destroy', $ticketOrder['id']) }}" method="POST" style="display:inline;">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit">
+                            <span class="material-icons">delete</span>
+                        </button>
+                      </form>
+                    </td>
                 </tr>
-            @endforeach 
+            @endforeach
             </tbody>
         </table>
     </main>

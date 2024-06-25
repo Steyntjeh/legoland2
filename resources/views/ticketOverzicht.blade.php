@@ -16,14 +16,14 @@
                     <td>{{$ticket['ticketPrijs']}}</td>
                     <td>{{$ticket['soortTicket']}}</td>
                     <td>
-                        <a href="{{ route('attractieUpdate', $attractie['id']) }}">
+                        <a href="{{ route('ticketUpdate', $ticket['id']) }}">
                             <button>
                             <span class="material-icons">edit</span>
                             </button>
                         </a>
                     </td>
                     <td>
-                      <form action="{{ route('attracties.destroy', $attractie['id']) }}" method="POST" style="display:inline;">
+                      <form action="{{ route('tickets.destroy', $ticket['id']) }}" method="POST" style="display:inline;">
                         @csrf
                         @method('DELETE')
                         <button type="submit">

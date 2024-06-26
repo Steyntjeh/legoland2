@@ -28,14 +28,14 @@
                     <td>{{$boeking['vertrek']}}</td>
                     <td>{{$boeking['aantalPersonen']}}</td>
                     <td>
-                        <a href="{{ route('attractieUpdate', $attractie['id']) }}">
+                        <a href="{{ route('boekUpdate', $boeking['id']) }}">
                             <button>
                             <span class="material-icons">edit</span>
                             </button>
                         </a>
                     </td>
                     <td>
-                      <form action="{{ route('attracties.destroy', $attractie['id']) }}" method="POST" style="display:inline;">
+                      <form action="{{ route('boekingen.destroy', $boeking['id']) }}" method="POST" style="display:inline;">
                         @csrf
                         @method('DELETE')
                         <button type="submit">

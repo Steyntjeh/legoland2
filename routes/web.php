@@ -106,8 +106,6 @@ Route::get('/adminOverzicht', [AdminOverzichtController::class, 'index']);
 
 Route::get('/contactOverzicht', [ContactOverzichtController::class, 'index']);
 
-Route::get('/boekOverzicht', [BoekOverzichtController::class, 'index']);
-
 Route::get('/accomodatieOverzicht', [AccomodatieOverzichtController::class, 'index'])->name('accomodatieOverzicht');
 Route::get('/accomodatieForm', [AccomodatieOverzichtController::class, 'create'])->name('accomodatieForm');
 Route::post('/accomodaties', [AccomodatieOverzichtController::class, 'store'])->name('accomodaties.store');
@@ -121,3 +119,8 @@ Route::post('/attracties', [AttractieOverzichtController::class, 'store'])->name
 Route::get('/attractieUpdate/{attractie}', [AttractieOverzichtController::class, 'edit'])->name('attractieUpdate');
 Route::put('/attracties/{attractie}', [AttractieOverzichtController::class, 'update'])->name('attracties.update');
 Route::delete('/attracties/{attractie}', [AttractieOverzichtController::class, 'destroy'])->name('attracties.destroy');
+
+Route::get('/boekOverzicht', [BoekOverzichtController::class, 'index'])->name('boekOverzicht');
+Route::get('/boekUpdate/{boeking}', [BoekOverzichtController::class, 'edit'])->name('boekUpdate');
+Route::put('/boekingen/{boeking}', [BoekOverzichtController::class, 'update'])->name('boekingen.update');
+Route::delete('/boekingen/{boeking}', [BoekOverzichtController::class, 'destroy'])->name('boekingen.destroy');

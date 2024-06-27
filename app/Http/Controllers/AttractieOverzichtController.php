@@ -14,7 +14,7 @@ class AttractieOverzichtController extends Controller
     public function index()
     {
         $attracties = Attracties::all();
-        return view('attracties.attractieOverzicht', compact('attracties'));
+        return view('attracties.attractieOverzicht', ['attracties' => $attracties]);
     }
 
     /**
@@ -67,7 +67,7 @@ class AttractieOverzichtController extends Controller
     public function edit($id)
     {
         $attractie = Attracties::find($id);
-        return view('attracties.attractieUpdate', compact('attractie'));
+        return view('attracties.attractieUpdate', ['attractie' => $attractie]);
     }
 
     /**

@@ -47,7 +47,7 @@ class BoekOverzichtController extends Controller
     public function edit($id)
     {
         $boeking = Boekingen::find($id);
-        return view('boekingen.boekUpdate', compact('boeking'));
+        return view('boekingen.boekUpdate', ['boeking' => $boeking]);
     }
 
     /**

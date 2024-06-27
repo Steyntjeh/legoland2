@@ -4,7 +4,7 @@
         <h1>Tickets</h1>
         <p>Hier kan je nieuwe ticket soorten toevoegen</p>
 
-        <form action="/accomodatieOverzicht" method="post">
+        <form action="{{ route('tickets.store') }}" method="post">
          @csrf
          <div class="form-group">
             <label for="ticketPrijs">Ticketprijs*</label>
@@ -14,7 +14,7 @@
             <label for="soortTicket">Soort ticket*</label>
             <input type="text" name="soortTicket" class="form-control" placeholder="Soort ticket...">
          </div>
-         <button type="submit" class="btn btn-primary">Verzenden</button>
+         <button type="submit" class="btn btn-primary">Opslaan</button>
         </form>
 
        @if($errors -> any())

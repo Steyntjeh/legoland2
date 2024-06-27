@@ -120,6 +120,13 @@ Route::get('/attractieUpdate/{attractie}', [AttractieOverzichtController::class,
 Route::put('/attracties/{attractie}', [AttractieOverzichtController::class, 'update'])->name('attracties.update');
 Route::delete('/attracties/{attractie}', [AttractieOverzichtController::class, 'destroy'])->name('attracties.destroy');
 
+Route::get('/ticketOverzicht', [TicketOverzichtController::class, 'index'])->name('tickets.ticketOverzicht');
+Route::get('/ticketForm', [TicketOverzichtController::class, 'create'])->name('tickets.ticketForm');
+Route::post('/tickets', [TicketOverzichtController::class, 'store'])->name('tickets.store');
+Route::get('/ticketUpdate/{ticket}', [TicketOverzichtController::class, 'edit'])->name('tickets.ticketUpdate');
+Route::put('/tickets/{ticket}', [TicketOverzichtController::class, 'update'])->name('tickets.update');
+Route::delete('/tickets/{ticket}', [TicketOverzichtController::class, 'destroy'])->name('tickets.destroy');
+
 Route::get('/boekOverzicht', [BoekOverzichtController::class, 'index'])->name('boekingen.boekOverzicht');
 Route::get('/boekUpdate/{boeking}', [BoekOverzichtController::class, 'edit'])->name('boekingen.boekUpdate');
 Route::put('/boekingen/{boeking}', [BoekOverzichtController::class, 'update'])->name('boekingen.update');

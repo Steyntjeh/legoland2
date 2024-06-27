@@ -7,12 +7,10 @@
         <tbody>
             <tr>
                 <th>Order nummer</th>
-                <th>Ingeplande datum</th>
                 <th>Voornaam</th>
                 <th>Achternaam</th>
                 <th>Email</th>
-                <th>Telefoonnummer</th>
-                <th>Bericht</th>
+                <th>Aantal tickets</th>
                 <th>Edit</th>
                 <th>Delete</th>
             </tr>

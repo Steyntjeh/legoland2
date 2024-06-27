@@ -14,7 +14,7 @@ class AccomodatieOverzichtController extends Controller
     public function index()
     {
         $accomodaties = Accomodaties::all();
-        return view('accomodaties.accomodatieOverzicht', compact('accomodaties'));
+        return view('accomodaties.accomodatieOverzicht', ['accomodaties' => $accomodaties]);
     }
 
     /**
@@ -67,7 +67,7 @@ class AccomodatieOverzichtController extends Controller
     public function edit($id)
     {
         $accomodatie = Accomodaties::find($id);
-        return view('accomodaties.accomodatieUpdate', compact('accomodatie'));
+        return view('accomodaties.accomodatieUpdate', ['accomodatie' => $accomodatie]);
     }
 
     /**

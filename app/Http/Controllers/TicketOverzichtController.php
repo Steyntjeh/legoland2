@@ -22,7 +22,7 @@ class TicketOverzichtController extends Controller
      */
     public function create()
     {
-        //
+        return view('tickets.ticketForm');
     }
 
     /**
@@ -30,13 +30,25 @@ class TicketOverzichtController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'ticketPrijs' => 'required',
+            'soortTicket' => 'required'
+        ]);
+
+        $tickets = new Tickets();
+
+        $tickets -> naamAttractie = $validatedData['ticketPrijs'];
+        $tickets -> tijdsDuur = $validatedData['soortTicket'];
+
+        $tickets->save();
+
+        return redirect()->route('tickets.ticketOverzicht')->with('success', 'Ticket toegevoegd');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(ticketOverzicht $ticketOverzicht)
+    public function show($id)
     {
         //
     }
@@ -44,24 +56,40 @@ class TicketOverzichtController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(ticketOverzicht $ticketOverzicht)
+    public function edit($id)
     {
-        //
+        $ticket = Tickets::find($id);
+        return view('tickets.ticketUpdate', ['ticket' => $ticket]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, ticketOverzicht $ticketOverzicht)
+    public function update(Request $request, $id)
     {
-        //
+        $validatedData = $request->validate([
+            'ticketPrijs' => 'required',
+            'soortTicket' => 'required'
+        ]);
+
+        $tickets = Tickets::findOrFail($id);
+
+        $tickets -> naamAttractie = $validatedData['ticketPrijs'];
+        $tickets -> tijdsDuur = $validatedData['soortTicket'];
+
+        $tickets->save();
+
+        return redirect()->route('tickets.ticketOverzicht')->with('success', 'Ticket bijgewerkt');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(ticketOverzicht $ticketOverzicht)
+    public function destroy($id)
     {
-        //
+        $ticket = Tickets::find($id);
+        $ticket->delete();
+
+        return redirect()->route('tickets.ticketOverzicht')->with('success', 'ticket verwijderd');
     }
 }

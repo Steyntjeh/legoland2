@@ -10,7 +10,7 @@
         <!-- Alle attractie cards --> 
         @foreach($attracties as $attractie)
         <div class="cards">
-            <img src="{{$attractie['image']}}" alt="">
+            <img src="{{$attractie['image']}}" alt="foto van {{$attractie['naamAttractie']}}">
             <h2>{{$attractie['naamAttractie']}}</h2>
             <!--<p>{{$attractie['informatie']}}</p> -->
             <p>Minimale lengte: {{$attractie['minimaleLengte']}} meter</p>

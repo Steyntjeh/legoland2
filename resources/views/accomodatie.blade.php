@@ -7,7 +7,7 @@
         <!-- Alle accomodatie cards -->
         @foreach($accomodaties as $accomodatie)
         <div class="cards">
-            <img src="{{$accomodatie['image']}}" alt="">
+            <img src="{{$accomodatie['image']}}" alt="Foto's van {{$accomodatie['type']}}">
             <h2>{{$accomodatie['type']}}</h2>
             <!--<p>{{$accomodatie['informatie']}}</p> -->
             <p>Aantal personen: {{$accomodatie['aantalPersonen']}} Personen</p>

@@ -14,7 +14,7 @@ class BoekOverzichtController extends Controller
     public function index()
     {
         $boekingen = Boekingen::all();
-        return view('boekOverzicht', ['boekingen' => $boekingen]);
+        return view('boekingen.boekOverzicht', ['boekingen' => $boekingen]);
     }
 
     /**
@@ -22,7 +22,7 @@ class BoekOverzichtController extends Controller
      */
     public function create()
     {
-        return view('boekForm');
+        //
     }
 
     /**
@@ -47,7 +47,7 @@ class BoekOverzichtController extends Controller
     public function edit($id)
     {
         $boeking = Boekingen::find($id);
-        return view('boekUpdate', compact('boeking'));
+        return view('boekingen.boekUpdate', compact('boeking'));
     }
 
     /**
@@ -81,7 +81,7 @@ class BoekOverzichtController extends Controller
 
         $boekingen->save();
 
-        return redirect()->route('boekOverzicht')->with('success', 'Boeking bijgewerkt');
+        return redirect()->route('boekingen.boekOverzicht')->with('success', 'Boeking bijgewerkt');
     }
 
     /**
@@ -92,6 +92,6 @@ class BoekOverzichtController extends Controller
         $boeking = Boekingen::find($id);
         $boeking->delete();
 
-        return redirect()->route('boekOverzicht')->with('success', 'boeking verwijderd');
+        return redirect()->route('boekingen.boekOverzicht')->with('success', 'boeking verwijderd');
     }
 }

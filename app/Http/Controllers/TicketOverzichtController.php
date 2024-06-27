@@ -14,7 +14,7 @@ class TicketOverzichtController extends Controller
     public function index()
     {
         $tickets = Tickets::all();
-        return view('ticketOverzicht', ['tickets' => $tickets]);
+        return view('tickets.ticketOverzicht', ['tickets' => $tickets]);
     }
 
     /**

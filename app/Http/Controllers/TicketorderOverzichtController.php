@@ -15,7 +15,7 @@ class TicketorderOverzichtController extends Controller
     {
         $ticketOrders = TicketOrder::all();
 
-        return view('ticketOrderOverzicht', ['ticketOrders' => $ticketOrders]);
+        return view('ticketOrders.ticketOrderOverzicht', ['ticketOrders' => $ticketOrders]);
     }
 
     /**

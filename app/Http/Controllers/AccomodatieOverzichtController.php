@@ -14,7 +14,7 @@ class AccomodatieOverzichtController extends Controller
     public function index()
     {
         $accomodaties = Accomodaties::all();
-        return view('accomodatieOverzicht', compact('accomodaties'));
+        return view('accomodaties.accomodatieOverzicht', compact('accomodaties'));
     }
 
     /**
@@ -22,7 +22,7 @@ class AccomodatieOverzichtController extends Controller
      */
     public function create()
     {
-        return view('accomodatieForm');
+        return view('accomodaties.accomodatieForm');
     }
 
     /**
@@ -50,7 +50,7 @@ class AccomodatieOverzichtController extends Controller
 
         $accomodaties->save();
 
-        return redirect()->route('accomodatieOverzicht')->with('success', 'Accommodatie toegevoegd');
+        return redirect()->route('accomodaties.accomodatieOverzicht')->with('success', 'Accommodatie toegevoegd');
     }
 
     /**
@@ -67,7 +67,7 @@ class AccomodatieOverzichtController extends Controller
     public function edit($id)
     {
         $accomodatie = Accomodaties::find($id);
-        return view('accomodatieUpdate', compact('accomodatie'));
+        return view('accomodaties.accomodatieUpdate', compact('accomodatie'));
     }
 
     /**
@@ -95,7 +95,7 @@ class AccomodatieOverzichtController extends Controller
     
         $accomodatie->save();
     
-        return redirect()->route('accomodatieOverzicht')->with('success', 'Accommodatie bijgewerkt');
+        return redirect()->route('accomodaties.accomodatieOverzicht')->with('success', 'Accommodatie bijgewerkt');
     }
 
     /**
@@ -106,6 +106,6 @@ class AccomodatieOverzichtController extends Controller
         $accomodatie = Accomodaties::find($id);
         $accomodatie->delete();
 
-        return redirect()->route('accomodatieOverzicht')->with('success', 'Accommodatie verwijderd');
+        return redirect()->route('accomodaties.accomodatieOverzicht')->with('success', 'Accommodatie verwijderd');
     }
 }

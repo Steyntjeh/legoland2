@@ -16,7 +16,7 @@
                     <td>{{$ticket['ticketPrijs']}}</td>
                     <td>{{$ticket['soortTicket']}}</td>
                     <td>
-                        <a href="{{ route('ticketUpdate', $ticket['id']) }}">
+                        <a href="{{ route('tickets.ticketUpdate', $ticket['id']) }}">
                             <button>
                             <span class="material-icons">edit</span>
                             </button>
@@ -34,7 +34,7 @@
                 </tr>
             @endforeach 
                 <tr>
-                    <th colspan="4"><button href="#">+ Add new</button></th>
+                    <th colspan="4"><button href="{{ route('tickets.ticketForm') }}">+ Add new</button></th>
                 </tr>
             </tbody>
         </table>

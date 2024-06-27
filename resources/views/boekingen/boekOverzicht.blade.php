@@ -28,7 +28,7 @@
                     <td>{{$boeking['vertrek']}}</td>
                     <td>{{$boeking['aantalPersonen']}}</td>
                     <td>
-                        <a href="{{ route('boekUpdate', $boeking['id']) }}">
+                        <a href="{{ route('boekingen.boekUpdate', $boeking['id']) }}">
                             <button>
                             <span class="material-icons">edit</span>
                             </button>

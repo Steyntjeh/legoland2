@@ -26,7 +26,7 @@
                     <td>{{$attractie['image']}}</td>
                     <td>{{$attractie['minimaleLengte']}}</td>
                     <td>
-                        <a href="{{ route('attractieUpdate', $attractie['id']) }}">
+                        <a href="{{ route('attracties.attractieUpdate', $attractie['id']) }}">
                             <button>
                             <span class="material-icons">edit</span>
                             </button>
@@ -46,7 +46,7 @@
             @endforeach 
                 <tr>
                     <!-- een knop om een nieuwe toevoegen  -->
-                    <th colspan="7"><a href="{{ route('attractieForm') }}"><button>+ Add new</button></a></th>
+                    <th colspan="7"><a href="{{ route('attracties.attractieForm') }}"><button>+ Add new</button></a></th>
                 </tr>
             </tbody>
         </table>

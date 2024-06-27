@@ -14,7 +14,7 @@ class AttractieOverzichtController extends Controller
     public function index()
     {
         $attracties = Attracties::all();
-        return view('attractieOverzicht', compact('attracties'));
+        return view('attracties.attractieOverzicht', compact('attracties'));
     }
 
     /**
@@ -22,7 +22,7 @@ class AttractieOverzichtController extends Controller
      */
     public function create()
     {
-        return view('attractieForm');
+        return view('attracties.attractieForm');
     }
 
     /**
@@ -50,7 +50,7 @@ class AttractieOverzichtController extends Controller
 
         $attracties->save();
 
-        return redirect()->route('attractieOverzicht')->with('success', 'Attractie toegevoegd');
+        return redirect()->route('attracties.attractieOverzicht')->with('success', 'Attractie toegevoegd');
     }
 
     /**
@@ -67,7 +67,7 @@ class AttractieOverzichtController extends Controller
     public function edit($id)
     {
         $attractie = Attracties::find($id);
-        return view('attractieUpdate', compact('attractie'));
+        return view('attracties.attractieUpdate', compact('attractie'));
     }
 
     /**
@@ -95,7 +95,7 @@ class AttractieOverzichtController extends Controller
 
         $attracties->save();
 
-        return redirect()->route('attractieOverzicht')->with('success', 'Attractie bijgewerkt');
+        return redirect()->route('attracties.attractieOverzicht')->with('success', 'Attractie bijgewerkt');
     }
 
     /**
@@ -106,6 +106,6 @@ class AttractieOverzichtController extends Controller
         $attractie = Attracties::find($id);
         $attractie->delete();
 
-        return redirect()->route('attractieOverzicht')->with('success', 'Attractie verwijderd');
+        return redirect()->route('attracties.attractieOverzicht')->with('success', 'Attractie verwijderd');
     }
 }

@@ -29,7 +29,7 @@
             <td>{{$accomodatie['facilities']}}</td>
             <td>{{$accomodatie['image']}}</td>
             <td>
-                <a href="{{ route('accomodatieUpdate', $accomodatie['id']) }}">
+                <a href="{{ route('accomodaties.accomodatieUpdate', $accomodatie['id']) }}">
                     <button>
                         <span class="material-icons">edit</span>
                     </button>
@@ -47,7 +47,7 @@
         </tr>
         @endforeach
         <tr>
-            <th colspan="7"><a href="{{ route('accomodatieForm') }}"><button>+ Add new</button></a></th>
+            <th colspan="7"><a href="{{ route('accomodaties.accomodatieForm') }}"><button>+ Add new</button></a></th>
         </tr>
       </tbody>
     </table>

@@ -2,7 +2,7 @@
 @section('content')
     <main>
         <h1>Attracties</h1>
-        <p>Hier kan je een ticket soort Bewerken</p>
+        <p>Hier kan je een ticketsoort Bewerken</p>
 
         <form action="{{ route('tickets.update', $ticket['id']) }}" method="post">
          @csrf

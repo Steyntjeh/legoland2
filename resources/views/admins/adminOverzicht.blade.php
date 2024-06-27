@@ -8,7 +8,6 @@
             <tr>
                 <th>Naam</th>
                 <th>Email</th>
-                <th>Edit</th>
                 <th>Delete</th>
             </tr>
             @foreach($admins as $admin)
@@ -16,14 +15,7 @@
                     <td>{{$admin['name']}}</td>
                     <td>{{$admin['email']}}</td>
                     <td>
-                        <a href="{{ route('attractieUpdate', $attractie['id']) }}">
-                            <button>
-                            <span class="material-icons">edit</span>
-                            </button>
-                        </a>
-                    </td>
-                    <td>
-                      <form action="{{ route('attracties.destroy', $attractie['id']) }}" method="POST" style="display:inline;">
+                      <form action="{{ route('admins.destroy', $admin['id']) }}" method="POST" style="display:inline;">
                         @csrf
                         @method('DELETE')
                         <button type="submit">

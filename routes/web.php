@@ -64,8 +64,6 @@ Route::post('/tickets/insert', [TicketsController::class, 'store']);
 
 Route::get('/ticketOverzicht', [TicketOverzichtController::class, 'index']);
 
-Route::get('/ticketOrderOverzicht', [TicketOrderOverzichtController::class, 'index']);
-
 Route::get('/besteld', function () {
     return view('Bestelling');
 });
@@ -131,3 +129,11 @@ Route::get('/boekOverzicht', [BoekOverzichtController::class, 'index'])->name('b
 Route::get('/boekUpdate/{boeking}', [BoekOverzichtController::class, 'edit'])->name('boekingen.boekUpdate');
 Route::put('/boekingen/{boeking}', [BoekOverzichtController::class, 'update'])->name('boekingen.update');
 Route::delete('/boekingen/{boeking}', [BoekOverzichtController::class, 'destroy'])->name('boekingen.destroy');
+
+Route::get('/ticketOrderOverzicht', [TicketOrderOverzichtController::class, 'index'])->name('ticketOrders.ticketOrderOverzicht');
+Route::get('/ticketOrderUpdate/{ticketOrder}', [TicketOrderOverzichtController::class, 'edit'])->name('ticketOrders.ticketOrderUpdate');
+Route::put('/ticketOrders/{ticketOrder}', [TicketOrderOverzichtController::class, 'update'])->name('ticketorders.update');
+Route::delete('/ticketOrders/{ticketOrder}', [TicketOrderOverzichtController::class, 'destroy'])->name('ticketorders.destroy');
+
+Route::get('/adminOverzicht', [AdminOverzichtController::class, 'index'])->name('admins.adminOverzicht');
+Route::delete('/admins/{admin}', [AdminOverzichtController::class, 'destroy'])->name('admins.destroy');

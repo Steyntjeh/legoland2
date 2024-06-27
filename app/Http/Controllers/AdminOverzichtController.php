@@ -46,7 +46,7 @@ class AdminOverzichtController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(adminOverzicht $adminOverzicht)
+    public function edit($id)
     {
         //
     }
@@ -54,7 +54,7 @@ class AdminOverzichtController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, adminOverzicht $adminOverzicht)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -62,8 +62,11 @@ class AdminOverzichtController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(adminOverzicht $adminOverzicht)
+    public function destroy($id)
     {
-        //
+        $admin = User::find($id);
+        $admin->delete();
+
+        return redirect()->route('admins.adminOverzicht')->with('success', 'Admin verwijderd');
     }
 }

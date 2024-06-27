@@ -2,7 +2,7 @@
 @section('content')
     <main>
         <h1>Tickets</h1>
-        <p>Hier kan je nieuwe ticket soorten toevoegen</p>
+        <p>Hier kan je nieuwe ticketsoorten toevoegen</p>
 
         <form action="{{ route('tickets.store') }}" method="post">
          @csrf

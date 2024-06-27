@@ -7,23 +7,22 @@
         <tbody>
             <tr>
                 <th>Order nummer</th>
+                <th>Ingeplande datum</th>
                 <th>Voornaam</th>
                 <th>Achternaam</th>
                 <th>Email</th>
-                <th>Aantal tickets</th>
                 <th>Edit</th>
                 <th>Delete</th>
             </tr>
             @foreach($ticketOrders as $ticketOrder)
                 <tr>
-                    <td>{{$ticketOrder['id']}}</td>
+                    <td>{{$ticketOrder['orderNummer']}}</td>
+                    <td>{{$ticketOrder['ingeplandeDatum']}}</td>
                     <td>{{$ticketOrder['voornaam']}}</td>
                     <td>{{$ticketOrder['achternaam']}}</td>
                     <td>{{$ticketOrder['email']}}</td>
-                    <td>{{$ticketOrder['ticket_id']}}</td>
-                    <td>{{$ticketOrder['quantity']}}</td>
                     <td>
-                        <a href="{{ route('tickeOrderUpdate', $ticketOrder['id']) }}">
+                        <a href="{{ route('ticketOrders.ticketOrderUpdate', $ticketOrder['id']) }}">
                             <button>
                             <span class="material-icons">edit</span>
                             </button>

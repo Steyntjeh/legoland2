@@ -45,24 +45,46 @@ class TicketorderOverzichtController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(ticketorderOverzicht $ticketorderOverzicht)
+    public function edit($id)
     {
-        //
+        $ticketOrder = TicketOrder::find($id);
+        return view('ticketOrders.ticketOrderUpdate', ['ticketOrder' => $ticketOrder]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, ticketorderOverzicht $ticketorderOverzicht)
+    public function update(Request $request, $id)
     {
-        //
+        $validatedData = $request->validate([
+            'orderNummer' => 'required',
+            'ingeplandeDatum' => 'required',
+            'email' => 'required',
+            'voornaam' => 'required',
+            'achternaam' => 'required'
+        ]);
+
+        $ticketOrders = TicketOrder::findOrFail($id);
+
+        $ticketOrders -> orderNummer = $validatedData['orderNummer'];
+        $ticketOrders -> ingeplandeDatum = $validatedData['ingeplandeDatum'];
+        $ticketOrders -> email = $validatedData['email'];
+        $ticketOrders -> voornaam = $validatedData['voornaam'];
+        $ticketOrders -> achternaam = $validatedData['achternaam'];
+
+        $ticketOrders->save();
+
+        return redirect()->route('ticketOrders.ticketOrderOverzicht')->with('success', 'ticket bestelling bijgewerkt');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(ticketorderOverzicht $ticketorderOverzicht)
+    public function destroy($id)
     {
-        //
+        $ticketOrder = TicketOrder::find($id);
+        $ticketOrder->delete();
+
+        return redirect()->route('ticketOrders.ticketOrderOverzicht')->with('success', 'ticket bestelling verwijderd');
     }
 }

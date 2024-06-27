@@ -11,8 +11,6 @@
                 <th>Email</th>
                 <th>Telefoonnummer</th>
                 <th>Bericht</th>
-                <th>Edit</th>
-                <th>Delete</th>
             </tr>
             @foreach($contacten as $contact)
                 <tr>
